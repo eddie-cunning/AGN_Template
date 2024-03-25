@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/SED_Template.iml" filepath="$PROJECT_DIR$/.idea/SED_Template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SEDTemplate_conda.iml" filepath="$PROJECT_DIR$/.idea/SEDTemplate_conda.iml" />
     </modules>
   </component>
 </project>

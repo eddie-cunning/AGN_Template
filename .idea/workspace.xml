@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="Commit working notebook 2" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2do4gOP1CQDHW9hRD5LzThn77wY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="" />
+      <created>1710661208189</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710661208189</updated>
+      <workItem from="1710661238248" duration="291000" />
+      <workItem from="1710661543512" duration="8000" />
+      <workItem from="1710661560342" duration="53000" />
+      <workItem from="1710667980550" duration="302000" />
+      <workItem from="1710668512973" duration="3000" />
+      <workItem from="1710668616625" duration="1366000" />
+      <workItem from="1710670068249" duration="635000" />
+      <workItem from="1710723539947" duration="8867000" />
+      <workItem from="1710794506985" duration="4656000" />
+      <workItem from="1710895203429" duration="6606000" />
+      <workItem from="1710981189915" duration="4244000" />
+      <workItem from="1711086559868" duration="3487000" />
+      <workItem from="1711267588264" duration="7106000" />
+      <workItem from="1711319772326" duration="15046000" />
+      <workItem from="1711347836648" duration="9721000" />
+      <workItem from="1711367602324" duration="1699000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1710795058680</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710795058680</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <created>1711338366437</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711338366437</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit working notebook">
+      <created>1711362535910</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711362535910</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Commit working notebook">
+      <created>1711363999464</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711363999464</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit working notebook 2">
+      <created>1711366791704</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711366791704</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Commit working notebook 2">
+      <created>1711368807092</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1711368807092</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="a3497891-92ff-4bea-a92d-92b315776046">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="a3497891-92ff-4bea-a92d-92b315776046" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Commit working notebook" />
+    <MESSAGE value="Commit working notebook 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit working notebook 2" />
+  </component>
+</project>
