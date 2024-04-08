@@ -2,5 +2,7 @@ inputs/OUTPUT*
 inputs/zphot.param*
 *__pycache__*
 
-templates/CarnallTemplates/
-templates/xspline_templates/
+outputs/cdfs/*
+outputs/cosmos/*
+outputs/uds/*
+

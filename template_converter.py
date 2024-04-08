@@ -18,7 +18,7 @@ for txt_files in txt_files:
     # Read the txt file
     data = pd.read_csv(txt_files, sep=" ", comment='#', header=None, skipinitialspace=True)
 
-    #scale_fix = np.multiply(data[2], data[3])
+    data[0] = data[0] * 1e4 # Convert the wavelength from Micron to Angstroms
     output_data = data[[0,2]]
 
     # Get the base name of the txt file

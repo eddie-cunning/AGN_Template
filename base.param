@@ -9,7 +9,7 @@ NMF_TOLERANCE             1e-05
 WAVELENGTH_FILE           templates/EAZY_v1.1_lines/lambda_v1.1.def
 TEMP_ERR_FILE             templates/TEMPLATE_ERROR.v2.0.zfourge
 TEMP_ERR_A2               1.0
-SYS_ERR                   0.03
+SYS_ERR                   0
 APPLY_IGM                 y
 IGM_SCALE_TAU             1.0
 SCALE_2175_BUMP           0.0
@@ -43,7 +43,7 @@ PRIOR_FLOOR               0.01
 FIX_ZSPEC                 n
 Z_MIN                     0.005
 Z_MAX                     10.0
-Z_STEP                    0.05
+Z_STEP                    not_defined_in_file
 Z_STEP_TYPE               1.0
 GET_ZP_OFFSETS            n
 ZP_OFFSET_TOL             0.0001
