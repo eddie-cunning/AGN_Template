@@ -1,169 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="Commit notebook">
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_2masxj13000533+1632151_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_3c120_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_3c273_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_3c351_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_3c390-3_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ark120_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ark564_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_f2m1113+1244_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_fairall9_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_h1821+643_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_iras-11119+3257_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_iras-f16156+0146_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk110_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk1502_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk231_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk279_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk290_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk421_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk493_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk509_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk590_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk817_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk876_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk926_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-00.50-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-01.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-02.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-04.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-08.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-16.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-32.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-64.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-00.50-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-01.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-02.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-04.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-08.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-16.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-32.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-64.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-00.50-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-00.50-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-00.50-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-01.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-01.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-01.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-02.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-02.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-02.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-04.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-04.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-04.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-08.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-08.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-08.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-16.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-16.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-16.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-32.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-32.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-32.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-64.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-64.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-64.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-00.50-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-00.50-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-00.50-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-01.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-01.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-01.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-02.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-02.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-02.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-04.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-04.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-04.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-08.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-08.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-08.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-16.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-16.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-16.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-32.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-32.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-32.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-64.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-64.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-64.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-00.50-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-01.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-02.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-04.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-08.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-16.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-32.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-64.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5728_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc7469_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_oq-530_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pg0026+129_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pg0052+251_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pg1211+143_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pg1307+085_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pg1415+451_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pg2349-014_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pks-1345+12_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ton951_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_wcom_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs/cdfs_agn.cat" afterDir="false" />
+    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SEDTemplate_conda.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SEDTemplate_conda.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_04_2024_7_46_pm_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_04_2024_7_46_pm__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eazy_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Eazy_test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base.param" beforeDir="false" afterPath="$PROJECT_DIR$/base.param" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_converter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdfs.translate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cosmos.translate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/FILTER.RES.latest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/FILTER.RES.latest.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/hdfn_fs99_eazy.cat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/hdfn_fs99_eazy.cat.zspec.only" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/templates" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/zphot.translate" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_2masxj13000533+1632151_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_2masxj13000533+1632151_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c120_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c120_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c273_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c273_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c351_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c351_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c390-3_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c390-3_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ark120_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ark120_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ark564_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ark564_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_f2m1113+1244_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_f2m1113+1244_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_fairall9_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_fairall9_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_h1821+643_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_h1821+643_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_iras-11119+3257_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_iras-11119+3257_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_iras-f16156+0146_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_iras-f16156+0146_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk110_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk110_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk1502_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk1502_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk231_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk231_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk279_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk279_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk290_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk290_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk421_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk421_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk493_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk493_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk509_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk509_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk590_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk590_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk817_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk817_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk876_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk876_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk926_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk926_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc3227-central_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc3227-central_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc3516-central_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc3516-central_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc4051-central_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc4051-central_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc4151-central_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc4151-central_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc5548-central_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc5548-central_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc5728_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc5728_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc7469_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc7469_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_oq-530_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_oq-530_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg0026+129_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg0026+129_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg0052+251_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg0052+251_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1211+143_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1211+143_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1307+085_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1307+085_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1415+451_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1415+451_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg2349-014_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg2349-014_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pks-1345+12_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pks-1345+12_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ton951_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ton951_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_wcom_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_wcom_multi_v1_spec-obs.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/testing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zfourge/cdfs/cdfs_agn.cat" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -183,6 +37,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2do4gOP1CQDHW9hRD5LzThn77wY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -199,7 +56,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/eddie/PycharmProjects/Random&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;debugger.dataViews.python.type.renderers&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
   <component name="RunManager">
@@ -290,7 +147,17 @@
       <workItem from="1713083794504" duration="4083000" />
       <workItem from="1713134754821" duration="4109000" />
       <workItem from="1713139005886" duration="1225000" />
-      <workItem from="1713140336691" duration="17828000" />
+      <workItem from="1713140336691" duration="18860000" />
+      <workItem from="1713216101693" duration="883000" />
+      <workItem from="1713217132124" duration="15240000" />
+      <workItem from="1713306065187" duration="10785000" />
+      <workItem from="1713680741607" duration="10993000" />
+      <workItem from="1713727436009" duration="305000" />
+      <workItem from="1713727767312" duration="742000" />
+      <workItem from="1713839870840" duration="9888000" />
+      <workItem from="1714104958955" duration="612000" />
+      <workItem from="1714268766399" duration="16481000" />
+      <workItem from="1714332344034" duration="2403000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1710795058680</created>
@@ -369,7 +236,63 @@
       <option name="project" value="LOCAL" />
       <updated>1712568287511</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param">
+      <created>1713170759980</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713170759980</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param">
+      <created>1713255248739</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713255248739</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param">
+      <created>1713857018152</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713857018152</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param">
+      <created>1714341169060</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714341169060</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param">
+      <created>1714341347547</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714341347547</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param">
+      <created>1714341878521</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714341878521</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param">
+      <created>1714342219104</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1714342219104</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param">
+      <created>1714342252132</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1714342252132</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,20 +361,17 @@
     <MESSAGE value="Commit working notebook 2" />
     <MESSAGE value="Commit current notebook" />
     <MESSAGE value="Commit notebook" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit notebook" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>notebook://C:/Users/eddie/PycharmProjects/SEDTemplate_conda/Eazy_test.ipynb</url>
-          <line>107</line>
+          <url>notebook://C:/Users/eddie/PycharmProjects/SEDTemplate_conda/eazy_auto.ipynb</url>
+          <line>6</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>notebook://C:/Users/eddie/PycharmProjects/SEDTemplate_conda/Eazy_test.ipynb</url>
-          <line>82</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
