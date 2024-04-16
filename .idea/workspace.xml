@@ -1,169 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="Commit notebook">
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_2masxj13000533+1632151_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_3c120_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_3c273_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_3c351_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_3c390-3_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ark120_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ark564_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_f2m1113+1244_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_fairall9_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_h1821+643_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_iras-11119+3257_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_iras-f16156+0146_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk110_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk1502_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk231_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk279_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk290_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk421_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk493_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk509_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk590_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk817_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk876_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk926_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-00.50-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-01.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-02.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-04.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-08.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-16.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-32.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central-64.00-ngc4569_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3227-central_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-00.50-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-01.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-02.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-04.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-08.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-16.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-32.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central-64.00-ngc4826_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-00.50-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-00.50-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-00.50-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-01.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-01.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-01.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-02.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-02.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-02.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-04.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-04.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-04.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-08.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-08.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-08.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-16.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-16.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-16.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-32.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-32.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-32.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-64.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-64.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central-64.00-ngc4559_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4051-central_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-00.50-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-00.50-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-00.50-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-01.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-01.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-01.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-02.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-02.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-02.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-04.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-04.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-04.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-08.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-08.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-08.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-16.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-16.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-16.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-32.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-32.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-32.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-64.00-ngc3310_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-64.00-ngc4125_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central-64.00-ngc4579_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-00.50-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-01.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-02.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-04.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-08.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-16.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-32.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central-64.00-ngc4138_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5548-central_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc5728_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc7469_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_oq-530_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pg0026+129_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pg0052+251_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pg1211+143_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pg1307+085_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pg1415+451_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pg2349-014_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_pks-1345+12_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ton951_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_wcom_multi_v1_spec-rest.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs/cdfs_agn.cat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/SEDTemplate_conda.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SEDTemplate_conda.iml" afterDir="false" />
+    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param">
+      <change afterPath="$PROJECT_DIR$/inputs/cdfs_eazy_test.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/eazy_v1.3_empty.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._.DS_Store" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._calibrations" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._eazy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._fast" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._readme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._uds.v1.5.10.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._uds.v1.5.8.3dhst.v0.4.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._uds.v1.5.8.agn.v0.5.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._uds.v1.5.8.fout" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._uds.v1.5.8.radio.v0.3.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._uds.v1.5.8.rest.v0.9.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._uds.v1.5.8.sfr.v0.4.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._uds.v1.5.8.vdw.v0.4.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._uds.v1.5.8.xray.v0.4.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._uds.v1.5.8.zout" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/._uds.v1.5.8.zspec.v0.4.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._.DS_Store" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._FILTER.RES.DR34.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._FILTER.RES.DR34.latest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._MipsFilter_24um.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._PacsFilter_100um.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._PacsFilter_160um.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._TEMPLATE_ERROR.v2.0.zfourge" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._UDS_nmad_v1.5.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._gal_ext.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._template_W08.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._templates" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._uds.se.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/._uds_zp.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/FILTER.RES.DR34.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/FILTER.RES.DR34.latest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/MipsFilter_24um.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/PacsFilter_100um.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/PacsFilter_160um.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/TEMPLATE_ERROR.v2.0.zfourge" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/UDS_nmad_v1.5.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/gal_ext.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/template_W08.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._DLAcoeff.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._LAFcoeff.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._c09_del_8.6_z_0.019_chab_age09.40_av2.0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._eazy_v1.1_sed1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._eazy_v1.1_sed2.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._eazy_v1.1_sed3.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._eazy_v1.1_sed4.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._eazy_v1.1_sed5.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._eazy_v1.1_sed6.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._eazy_v1.1_sed7.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._erb2010_highEW.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._lambda_v1.1.def.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._prior_K_TAO.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/._spectra.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/DLAcoeff.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/LAFcoeff.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/c09_del_8.6_z_0.019_chab_age09.40_av2.0.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/eazy_v1.1_sed1.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/eazy_v1.1_sed2.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/eazy_v1.1_sed3.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/eazy_v1.1_sed4.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/eazy_v1.1_sed5.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/eazy_v1.1_sed6.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/eazy_v1.1_sed7.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/erb2010_highEW.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/lambda_v1.1.def.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/prior_K_TAO.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/templates/spectra.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/uds.se.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/calibrations/uds_zp.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.153.coeff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.153.rf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.153.rf.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.155.coeff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.155.rf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.155.rf.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.161.coeff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.161.rf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.161.rf.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.274.coeff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.274.rf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.274.rf.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.coeff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.pz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.temp_sed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.tempfilt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/._uds.v1.5.8.zbin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.153.coeff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.153.rf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.153.rf.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.155.coeff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.155.rf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.155.rf.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.161.coeff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.161.rf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.161.rf.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.274.coeff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.274.rf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.274.rf.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.coeff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.param" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.pz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.readbin.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.temp_sed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.tempfilt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.translate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.zbin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.zout" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/eazy/uds.v1.5.8.zout.FITS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/._readme_3dhst.v0.4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/._readme_agn.v0.5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/._readme_radio.v0.3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/._readme_sfr.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/._readme_vdw_v0.4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/._readme_xray.v0.4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/._readme_zspec.v0.4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/readme_3dhst.v0.4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/readme_agn.v0.5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/readme_radio.v0.3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/readme_restframe.v0.9.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/readme_sfr.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/readme_vdw_v0.4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/readme_xray.v0.4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/readme/readme_zspec.v0.4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/uds.v1.5.10.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/uds.v1.5.8.3dhst.v0.4.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/uds.v1.5.8.agn.v0.5.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/uds.v1.5.8.fout" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/uds.v1.5.8.radio.v0.3.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/uds.v1.5.8.rest.v0.9.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/uds.v1.5.8.sfr.v0.4.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/uds.v1.5.8.vdw.v0.4.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/uds.v1.5.8.xray.v0.4.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/uds.v1.5.8.zout" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/uds/uds.v1.5.8.zspec.v0.4.cat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_04_2024_7_46_pm_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_04_2024_7_46_pm__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eazy_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Eazy_test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base.param" beforeDir="false" afterPath="$PROJECT_DIR$/base.param" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_converter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdfs.translate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cosmos.translate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/FILTER.RES.latest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/FILTER.RES.latest.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/hdfn_fs99_eazy.cat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/hdfn_fs99_eazy.cat.zspec.only" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/read_eazy_binaries.py" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/read_eazy_binaries.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/templates" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/zphot.translate" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_2masxj13000533+1632151_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_2masxj13000533+1632151_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c120_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c120_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c273_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c273_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c351_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c351_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c390-3_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c390-3_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ark120_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ark120_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ark564_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ark564_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_f2m1113+1244_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_f2m1113+1244_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_fairall9_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_fairall9_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_h1821+643_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_h1821+643_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_iras-11119+3257_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_iras-11119+3257_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_iras-f16156+0146_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_iras-f16156+0146_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk110_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk110_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk1502_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk1502_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk231_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk231_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk279_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk279_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk290_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk290_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk421_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk421_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk493_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk493_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk509_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk509_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk590_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk590_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk817_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk817_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk876_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk876_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk926_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_mrk926_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc3227-central_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc3227-central_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc3516-central_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc3516-central_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc4051-central_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc4051-central_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc4151-central_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc4151-central_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc5548-central_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc5548-central_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc5728_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc5728_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc7469_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ngc7469_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_oq-530_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_oq-530_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg0026+129_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg0026+129_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg0052+251_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg0052+251_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1211+143_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1211+143_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1307+085_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1307+085_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1415+451_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1415+451_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg2349-014_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg2349-014_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pks-1345+12_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pks-1345+12_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ton951_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_ton951_multi_v1_spec-obs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_wcom_multi_v1_spec-obs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_wcom_multi_v1_spec-obs.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zfourge/cdfs/cdfs_agn.cat" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +279,9 @@
       <workItem from="1713083794504" duration="4083000" />
       <workItem from="1713134754821" duration="4109000" />
       <workItem from="1713139005886" duration="1225000" />
-      <workItem from="1713140336691" duration="17828000" />
+      <workItem from="1713140336691" duration="18860000" />
+      <workItem from="1713216101693" duration="883000" />
+      <workItem from="1713217132124" duration="14717000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1710795058680</created>
@@ -369,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712568287511</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param">
+      <created>1713170759980</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713170759980</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,23 +436,8 @@
     <MESSAGE value="Commit working notebook 2" />
     <MESSAGE value="Commit current notebook" />
     <MESSAGE value="Commit notebook" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit notebook" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>notebook://C:/Users/eddie/PycharmProjects/SEDTemplate_conda/Eazy_test.ipynb</url>
-          <line>107</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
-          <url>notebook://C:/Users/eddie/PycharmProjects/SEDTemplate_conda/Eazy_test.ipynb</url>
-          <line>82</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SEDTemplate_conda$agn_catalogue.coverage" NAME="agn_catalogue Coverage Results" MODIFIED="1712796515870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

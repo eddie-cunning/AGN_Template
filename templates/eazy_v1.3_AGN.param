@@ -22,8 +22,7 @@
 7   templates/EAZY_v1.1_lines/eazy_v1.1_sed7.dat    1.0 0 1.0   7
 8   templates/Dusty/c09_del_8.6_z_0.019_chab_age09.40_av2.0.dat   1.0 0 1.0    
 9   templates/erb2010_highEW.dat   1.0 0 1.0    
-9   templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_oq-530_multi_v1_spec-obs.dat   1.0 0 1.0    
-10   templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg0026+129_multi_v1_spec-obs.dat   1.0 0 1.0    
-11   templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg0052+251_multi_v1_spec-obs.dat   1.0 0 1.0    
-12   templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1211+143_multi_v1_spec-obs.dat   1.0 0 1.0    
-13   templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_pg1307+085_multi_v1_spec-obs.dat   1.0 0 1.0    
+9   templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c120_multi_v1_spec-obs.dat   1.0 0 1.0    
+10   templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c273_multi_v1_spec-obs.dat   1.0 0 1.0    
+11   templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c351_multi_v1_spec-obs.dat   1.0 0 1.0    
+12   templates/hlsp_agnsedatlas_observed/hlsp_agnsedatlas_multi_multi_3c390-3_multi_v1_spec-obs.dat   1.0 0 1.0    
