@@ -1,0 +1,17 @@
+Index: Eazy_test.ipynb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Eazy_test.ipynb b/Eazy_test.ipynb
+--- a/Eazy_test.ipynb	(revision dc7f82c94b448c7ed96e5a52e93bb688d26cf154)
++++ b/Eazy_test.ipynb	(date 1713170799833)
+@@ -562,7 +562,7 @@
+      "name": "stderr",
+      "output_type": "stream",
+      "text": [
+-      " 18%|█▊        | 5386/30421 [00:55<04:33, 91.70it/s] "
++      " 33%|███▎      | 9987/30421 [01:43<03:36, 94.32it/s] "
+      ]
+     }
+    ],
