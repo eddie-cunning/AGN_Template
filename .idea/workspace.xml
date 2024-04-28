@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_04_2024_7_46_pm_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_04_2024_7_46_pm__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eazy_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Eazy_test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdfs.translate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cosmos.translate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/FILTER.RES.latest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/FILTER.RES.latest.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/hdfn_fs99_eazy.cat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/hdfn_fs99_eazy.cat.zspec.only" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/templates" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/zphot.translate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/testing.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zfourge/cdfs/cdfs_agn.cat" beforeDir="false" />
-    </list>
+    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +16,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -157,7 +141,7 @@
       <workItem from="1713839870840" duration="9888000" />
       <workItem from="1714104958955" duration="612000" />
       <workItem from="1714268766399" duration="16481000" />
-      <workItem from="1714332344034" duration="2403000" />
+      <workItem from="1714332344034" duration="2733000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1710795058680</created>
@@ -292,7 +276,21 @@
       <option name="project" value="LOCAL" />
       <updated>1714342252132</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param">
+      <created>1714342338368</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1714342338368</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param">
+      <created>1714342560255</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1714342560255</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,9 +359,9 @@
     <MESSAGE value="Commit working notebook 2" />
     <MESSAGE value="Commit current notebook" />
     <MESSAGE value="Commit notebook" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
