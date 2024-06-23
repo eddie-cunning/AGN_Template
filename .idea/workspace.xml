@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param">
-      <change afterPath="$PROJECT_DIR$/eazy_auto2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/agn_frac.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results_cut.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2024_6_46_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2024_6_46_pm__Changes_.xml" afterDir="false" />
+    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="added slimmed results file as agn_frac">
+      <change afterPath="$PROJECT_DIR$/catalogue_prepare.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.1.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.2.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.3.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin1.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin10.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin11.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin12.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin13.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin14.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin15.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin16.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin17.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin18.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin19.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin2.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin20.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin3.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin4.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin5.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin6.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin7.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin8.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.bin9.0.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.binnan.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.fraction.nan.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs.range.(0, -1).cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/cdfs_agn_frac.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/eazy_test.cat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2024_6_46_pm_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2024_6_46_pm__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eazy_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Eazy_test.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eazy_auto.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/eazy_auto.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazy_auto2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h5_load_sedplot.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/h5_load_sedplot.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/agn_frac.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/cdfs_eazy_test.cat" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/cdfs_eazy_test.cat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/key_numbers.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/results_cut.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/testing.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -47,10 +82,15 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/eddie/PycharmProjects/Random&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+    &quot;last_opened_file_path&quot;: &quot;G:/pycharmprojects&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.project&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\pycharmprojects" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="SEDTemplate_conda" />
@@ -150,7 +190,17 @@
       <workItem from="1714104958955" duration="612000" />
       <workItem from="1714268766399" duration="16481000" />
       <workItem from="1714332344034" duration="3380000" />
-      <workItem from="1714343309547" duration="2074000" />
+      <workItem from="1714343309547" duration="10509000" />
+      <workItem from="1714438730220" duration="10888000" />
+      <workItem from="1714526198595" duration="2956000" />
+      <workItem from="1714610212057" duration="4221000" />
+      <workItem from="1714633047351" duration="8644000" />
+      <workItem from="1714683400160" duration="668000" />
+      <workItem from="1714709523858" duration="2856000" />
+      <workItem from="1715201390749" duration="23414000" />
+      <workItem from="1717985704461" duration="598000" />
+      <workItem from="1718752915057" duration="3171000" />
+      <workItem from="1719118301436" duration="13262000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1710795058680</created>
@@ -320,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714343322028</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added slimmed results file as agn_frac">
+      <created>1714345460860</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1714345460860</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +471,8 @@
     <MESSAGE value="Commit notebook" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master', some updates to calling files, each field can be used&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
+    <MESSAGE value="added slimmed results file as agn_frac" />
+    <option name="LAST_COMMIT_MESSAGE" value="added slimmed results file as agn_frac" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
