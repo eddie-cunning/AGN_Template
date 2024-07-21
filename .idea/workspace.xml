@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="Updating files. Many Improvments, mostly cleaning directory">
-      <change afterPath="$PROJECT_DIR$/template_run_auto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eazy_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Eazy_test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/testing.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="added file to auto run templates, saving flux model information." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +195,7 @@
       <workItem from="1720821847444" duration="6895000" />
       <workItem from="1721086316447" duration="7134000" />
       <workItem from="1721110080305" duration="2783000" />
-      <workItem from="1721127223237" duration="5796000" />
+      <workItem from="1721127223237" duration="6147000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1710795058680</created>
@@ -386,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719135560289</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="added file to auto run templates, saving flux model information.">
+      <created>1721543766683</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1721543766683</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +482,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;base.param" />
     <MESSAGE value="added slimmed results file as agn_frac" />
     <MESSAGE value="Updating files. Many Improvments, mostly cleaning directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating files. Many Improvments, mostly cleaning directory" />
+    <MESSAGE value="added file to auto run templates, saving flux model information." />
+    <option name="LAST_COMMIT_MESSAGE" value="added file to auto run templates, saving flux model information." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
