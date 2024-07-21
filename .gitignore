@@ -6,4 +6,5 @@ outputs/cdfs/*
 outputs/cosmos/*
 outputs/uds/*
 inputs/results.txt
+testing.ipynb
 

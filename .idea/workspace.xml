@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="Updating files. Many Improvments, mostly cleaning directory" />
+    <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="Updating files. Many Improvments, mostly cleaning directory">
+      <change afterPath="$PROJECT_DIR$/template_run_auto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eazy_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Eazy_test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/testing.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,14 +17,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="b1caadbc-c3e2-4d4c-8b9b-e1c349c7ed19" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -39,11 +49,14 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/pycharmprojects&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.project&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/eddie/PycharmProjects/SEDTemplate_conda&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\eddie\PycharmProjects\SEDTemplate_conda" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\pycharmprojects" />
     </key>
@@ -93,8 +106,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="template_run_auto" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SEDTemplate_conda" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/template_run_auto.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.template_run_auto" />
         <item itemvalue="Python.template_converter" />
       </list>
     </recent_temporary>
@@ -157,7 +193,16 @@
       <workItem from="1715201390749" duration="23414000" />
       <workItem from="1717985704461" duration="598000" />
       <workItem from="1718752915057" duration="3171000" />
-      <workItem from="1719118301436" duration="13611000" />
+      <workItem from="1719118301436" duration="31505000" />
+      <workItem from="1719604464829" duration="630000" />
+      <workItem from="1719785619856" duration="15882000" />
+      <workItem from="1720039776659" duration="6683000" />
+      <workItem from="1720481771903" duration="9723000" />
+      <workItem from="1720630759808" duration="7132000" />
+      <workItem from="1720821847444" duration="6895000" />
+      <workItem from="1721086316447" duration="7134000" />
+      <workItem from="1721110080305" duration="2783000" />
+      <workItem from="1721127223237" duration="5796000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1710795058680</created>
@@ -442,16 +487,24 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="jupyter-line">
+        <line-breakpoint suspend="THREAD" type="jupyter-line">
           <url>notebook://C:/Users/eddie/PycharmProjects/SEDTemplate_conda/eazy_auto.ipynb</url>
           <line>6</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SEDTemplate_conda$agn_catalogue.coverage" NAME="agn_catalogue Coverage Results" MODIFIED="1712796515870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SEDTemplate_conda$template_converter.coverage" NAME="template_converter Coverage Results" MODIFIED="1713087284568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SEDTemplate_conda$template_run_auto.coverage" NAME="template_run_auto Coverage Results" MODIFIED="1720749631992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
