@@ -22,6 +22,7 @@ import importlib
 import sys
 import eazy
 import astropy.stats
+import multiprocessing as mp
 
 np.seterr(all='ignore')
 warnings.simplefilter('ignore', category=AstropyWarning)
@@ -38,7 +39,7 @@ warnings.simplefilter('ignore', category=AstropyWarning)
 os.getcwd()
 
 # Load ZFOURGE catalogue from local drive
-test_title = 'individual_main'  # title of the test, eg. 1,2, A, B, Initial.
+test_title = 'individual_rest_composite'  # title of the test, eg. 1,2, A, B, Initial.
 field = 'cdfs'  # 'cdfs', 'cosmos', or 'uds'
 
 # Choose ID key for the catalogue
@@ -47,12 +48,14 @@ id_key = 'normal'
 
 # Directories for key, name keys anything, just to keep track of any complex object choices made in catalogue_prepare.ipynb
 id_key_dict = {'normal': 'inputs/alternate_catalogues/cdfs.range.(0, -1).cat',
-               'fraction': f'inputs/alternate_catalogues/{field}.fraction.bin10.0.cat',
-               'luminosity': f'inputs/alternate_catalogues/{field}.luminosity.bin10.0.cat',
+           'normal_new': 'inputs/alternate_catalogues/cdfs.range.(0, 30911).cat',
+             'fraction': f'inputs/alternate_catalogues/{field}.fraction.bin10.0.cat',
+          'luminosity' : f'inputs/alternate_catalogues/{field}.luminosity.bin10.0.cat',
                'ir_agn': f'inputs/alternate_catalogues/{field}.ir_agn.cat',
-               'radio_agn': f'inputs/alternate_catalogues/{field}.radio_agn.cat',
-               'xray_agn': f'inputs/alternate_catalogues/{field}.xray_agn.cat',
-               'only_agn': f'inputs/alternate_catalogues/{field}.only_agn_above_0.1.cat'}
+            'radio_agn': f'inputs/alternate_catalogues/{field}.radio_agn.cat',
+             'xray_agn': f'inputs/alternate_catalogues/{field}.xray_agn.cat',
+             'only_agn': f'inputs/alternate_catalogues/{field}.only_agn_above_0.1.cat',
+                 'lacy': f'inputs/alternate_catalogues/{field}.lacy_wedge.cat'}
 
 # AGN templates allocation
 loop_number = 1  # what loop you are on
@@ -60,7 +63,6 @@ loop_number = 1  # what loop you are on
 use_galaxy_templates = True  # set to True to use galaxy templates as well
 
 # ----------------------------------------------------------------------------------------------------------------------
-
 # Directories
 if not os.path.isdir(f'outputs/{field}/{test_title}'):
     os.makedirs(f'outputs/{field}/{test_title}')
@@ -106,7 +108,7 @@ with open(temp_param) as f:
 with open(empty_param) as f:
     original_empty = f.read()
 
-agn_dir = 'templates/hlsp_agnsedatlas_rest/'  # dir with all agn templates
+agn_dir = 'templates/hlsp_agnsedatlas_rest_composite/'  # dir with all agn templates
 agn_temp_all = os.listdir(agn_dir)
 
 
@@ -150,6 +152,11 @@ def agn_template_loader(templates, use_galaxy_templates=False):
 agn_per_dir = f'inputs/{field}_agn_frac.txt'  # file with AGN fractions for each object, prepared in catalogue_prepare.ipynb
 all_bayes = pd.read_csv(agn_per_dir, sep="\s+", comment='#')
 main = pd.merge(main, all_bayes, on='id', how='left')  # AGN fraction for each object
+
+has_fraction = 'bayes.agn.fracAGN' in main.columns
+if not has_fraction:
+    main = pd.merge(main, all_bayes, on='id', how='left') # AGN fraction for each object
+
 mean_frac = np.mean(main['bayes.agn.fracAGN'])
 positive_agn = main[main['bayes.agn.fracAGN'] > 0]
 # ----------------------------------------------------------------------------------------------------------------------
@@ -161,7 +168,7 @@ param_file = 'base.param'  # base parameter file, does not include all informati
 translate_file = glob.glob(f'zfourge/{field}/eazy/{field}.*.translate')
 
 params = {}  # setting field specific parameters
-params['Z_STEP'] = 0.005  # redshift step, defines the precision of each fit, 0.005 default
+params['Z_STEP'] = 0.05  # redshift step, defines the precision of each fit, 0.005 default
 
 # inputs
 params['TEMPLATES_FILE'] = 'templates/eazy_v1.3_AGN.param'  # parameter file containing which templates will be used
@@ -273,14 +280,21 @@ def eazy_single_template(template):
 no_of_templates = len(agn_temp_all)
 all_time = []
 
-for j in range(no_of_templates):
-    i = j + 12
-    if i > no_of_templates:
-        print('All templates done')
-        break
-    if __name__ == '__main__':
+if __name__ == '__main__':
+    for j in range(no_of_templates):
+
+        pool = mp.Pool(processes=2, maxtasksperchild=1000) #EAZY runs mutliprocessing
+
+        i = j + 65
+
+        if i >= no_of_templates:
+            print('All templates done')
+            break
+
         all_time.append(time.ctime())
         eazy_single_template(i)
+        pool.close()
+
         print(f'template {i} done')
         print(all_time)
         print('--------------------------------------------------------------')
