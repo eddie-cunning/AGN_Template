@@ -2,9 +2,13 @@ inputs/OUTPUT*
 inputs/zphot.param*
 *__pycache__*
 
-outputs/cdfs/*
-outputs/cosmos/*
-outputs/uds/*
-inputs/results.txt
+outputs/*
+inputs/cdfs_results.txt
+inputs/cosmos_results.txt
+inputs/uds_results.txt
 testing.ipynb
+grizli
+inputs/alternate_catalogues/combined.normal.cat
+
+
 

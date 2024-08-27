@@ -12,14 +12,5 @@
 #      with current template if combined fits are enabled.
 #
 # Sample entry:
-# 1 [path_to_file]/template1.sed 1.0_lines 14.7 0.2 2,3,5
-1   templates/EAZY_v1.1_lines/eazy_v1.1_sed1.dat    1.0 0 1.0   2,3,4,5,6,7,8
-2   templates/EAZY_v1.1_lines/eazy_v1.1_sed2.dat    1.0 0 1.0   3,4,5,6,7,8
-3   templates/EAZY_v1.1_lines/eazy_v1.1_sed3.dat    1.0 0 1.0   4,5,6,7,8
-4   templates/EAZY_v1.1_lines/eazy_v1.1_sed4.dat    1.0 0 1.0   5,6,7,8
-5   templates/EAZY_v1.1_lines/eazy_v1.1_sed5.dat    1.0 0 1.0   6,7,8
-6   templates/EAZY_v1.1_lines/eazy_v1.1_sed6.dat    1.0 0 1.0   7,8
-7   templates/EAZY_v1.1_lines/eazy_v1.1_sed7.dat    1.0 0 1.0   7
-8   templates/Dusty/c09_del_8.6_z_0.019_chab_age09.40_av2.0.dat   1.0 0 1.0    
-9   templates/erb2010_highEW.dat   1.0 0 1.0    
-9   templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk110_multi_v1_spec-rest.dat   1.0 0 1.0    
+# 1 [path_to_file]/template1.sed 1.0_lines 14.7 0.2 2,3,5 
+0   templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_3c120_multi_v1_spec-rest.dat   1.0 0 1.0    

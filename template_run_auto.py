@@ -1,4 +1,6 @@
 # will run each template individually
+# each test needs a new test name, otherwise ti will append to the old name directory and main file.
+# change the key, field, zstep for each test
 # for each EAZY run, the following parameters will be returned:
 """
     - object ID
@@ -10,6 +12,7 @@
     - phot redshift
     - chi2
 """
+# ----------------------------------------------------------------------------------------------------------------------
 import os
 import glob
 import matplotlib.pyplot as plt
@@ -39,23 +42,30 @@ warnings.simplefilter('ignore', category=AstropyWarning)
 os.getcwd()
 
 # Load ZFOURGE catalogue from local drive
-test_title = 'individual_rest_composite'  # title of the test, eg. 1,2, A, B, Initial.
-field = 'cdfs'  # 'cdfs', 'cosmos', or 'uds'
+test_title = 'individual_bin0.3to0.4_0.05'  # title of the test, eg. 1,2, A, B, Initial.
+field = 'uds'  # 'cdfs', 'cosmos', or 'uds'
 
 # Choose ID key for the catalogue
 # A key designates what object you want included
-id_key = 'normal'
+id_key = 'fraction0.3to0.4'
 
 # Directories for key, name keys anything, just to keep track of any complex object choices made in catalogue_prepare.ipynb
-id_key_dict = {'normal': 'inputs/alternate_catalogues/cdfs.range.(0, -1).cat',
-           'normal_new': 'inputs/alternate_catalogues/cdfs.range.(0, 30911).cat',
-             'fraction': f'inputs/alternate_catalogues/{field}.fraction.bin10.0.cat',
-          'luminosity' : f'inputs/alternate_catalogues/{field}.luminosity.bin10.0.cat',
-               'ir_agn': f'inputs/alternate_catalogues/{field}.ir_agn.cat',
-            'radio_agn': f'inputs/alternate_catalogues/{field}.radio_agn.cat',
-             'xray_agn': f'inputs/alternate_catalogues/{field}.xray_agn.cat',
-             'only_agn': f'inputs/alternate_catalogues/{field}.only_agn_above_0.1.cat',
-                 'lacy': f'inputs/alternate_catalogues/{field}.lacy_wedge.cat'}
+id_key_dict = {
+    'normal': f'inputs/alternate_catalogues/{field}.normal.cat',
+    'fraction0.0to0.1': f'inputs/alternate_catalogues/{field}.fraction.bin0.0to0.1.cat',
+    'fraction0.1to0.2': f'inputs/alternate_catalogues/{field}.fraction.bin0.1to0.2.cat',
+    'fraction0.2to0.3': f'inputs/alternate_catalogues/{field}.fraction.bin0.2to0.3.cat',
+    'fraction0.3to0.4': f'inputs/alternate_catalogues/{field}.fraction.bin0.3to0.4.cat',
+    'fraction0.4to0.5': f'inputs/alternate_catalogues/{field}.fraction.bin0.4to0.5.cat',
+    'ir_agn': f'inputs/alternate_catalogues/{field}.ir_agn.cat',
+    'radio_agn': f'inputs/alternate_catalogues/{field}.radio_agn.cat',
+    'xray_agn': f'inputs/alternate_catalogues/{field}.xray_agn.cat',
+    'only_agn_0.4': f'inputs/alternate_catalogues/{field}.only_agn_above_0.4.cat',
+    'only_agn_0.5': f'inputs/alternate_catalogues/{field}.only_agn_above_0.5.cat',
+    'lacy': f'inputs/alternate_catalogues/{field}.lacy_wedge.cat',
+    'donley': f'inputs/alternate_catalogues/{field}.donley_wedge.cat',
+    'useflag': f'inputs/alternate_catalogues/{field}.useflag.cat'
+}
 
 # AGN templates allocation
 loop_number = 1  # what loop you are on
@@ -64,12 +74,13 @@ use_galaxy_templates = True  # set to True to use galaxy templates as well
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Directories
-if not os.path.isdir(f'outputs/{field}/{test_title}'):
-    os.makedirs(f'outputs/{field}/{test_title}')
+output_location = 'G:/honours/outputs'
+if not os.path.isdir(f'{output_location}/{field}/{test_title}'):
+    os.makedirs(f'{output_location}/{field}/{test_title}')
 
 # Where to Save number data
 
-key_data_file = f'outputs/{field}/{test_title}/{test_title}_data.csv'
+key_data_file = f'{output_location}/{field}/{test_title}/{test_title}_data.csv'
 headings = ['id_key', 'zstep', 'loop_number', 'agn_templates', 'galaxy templates', 'total_obj', 'mean_agn_frac',
             'spec_count', 'outlier_count', 'nmad_val']
 
@@ -81,13 +92,13 @@ if not os.path.isfile(key_data_file):
 # Read the Catalogue
 
 main_cat = pd.read_csv(id_key_dict[id_key])  # get the catalogue for the id_key
-main_cat.to_csv('inputs/eazy_test.cat',
+main_cat.to_csv('inputs/eazy_auto.cat',
                 index=False)  # create a new catalogue, allows for change to be made in this cell
 
 # Setting up the main catalogue
-main = pd.read_csv('inputs/eazy_test.cat', sep=" ", comment="#", header=None,
+main = pd.read_csv('inputs/eazy_auto.cat', sep=" ", comment="#", header=None,
                    skipinitialspace=True)  # opening cut cat, and adjusting it
-headers = pd.read_csv('inputs/eazy_test.cat', sep=" ", header=None, nrows=1).iloc[0]
+headers = pd.read_csv('inputs/eazy_auto.cat', sep=" ", header=None, nrows=1).iloc[0]
 headers = headers[1:]
 main.columns = headers
 
@@ -99,7 +110,7 @@ total_count = len(main)  # all objects in the range
 temp_param = 'templates/eazy_v1.3.spectra.param'  # basic parameter file, no agn templates
 last_id = 9  # last id in the parameter file
 empty_param = 'templates/eazy_v1.3_empty.param'  # empty parameter file
-agn_param = 'templates/eazy_v1.3_AGN.param'  # parameter file with agn templates
+agn_param = 'templates/eazy_v1.3_AGN_auto.param'  # parameter file with agn templates
 
 # opening the parameter files, and reading the contents
 with open(temp_param) as f:
@@ -108,7 +119,7 @@ with open(temp_param) as f:
 with open(empty_param) as f:
     original_empty = f.read()
 
-agn_dir = 'templates/hlsp_agnsedatlas_rest_composite/'  # dir with all agn templates
+agn_dir = 'templates/hlsp_agnsedatlas_rest/'  # dir with all agn templates
 agn_temp_all = os.listdir(agn_dir)
 
 
@@ -127,7 +138,7 @@ def agn_template_loader(templates, use_galaxy_templates=False):
             print('No AGN templates added, just using EAZY galaxy templates')
             return
         for i in range(no_of_templates_added):
-            current_id = last_id + i
+            current_id = last_id + 1 + i
             copy_original_galaxy = copy_original_galaxy + f'\n{current_id}   {agn_dir}{agn_temp_all[templates[i]]}   1.0 0 1.0    '
         open(agn_param, 'w').write(copy_original_galaxy)
         print(f'AGN templates added to the parameter file, {templates}, {agn_param}, {last_id} galaxy templates used')
@@ -171,9 +182,9 @@ params = {}  # setting field specific parameters
 params['Z_STEP'] = 0.05  # redshift step, defines the precision of each fit, 0.005 default
 
 # inputs
-params['TEMPLATES_FILE'] = 'templates/eazy_v1.3_AGN.param'  # parameter file containing which templates will be used
-params['CACHE_FILE'] = f'zfourge/{field}/{field}.tempfilt'
-params['CATALOG_FILE'] = f'inputs/eazy_test.cat'  # for cut catalogue created in the earlier cell
+params['TEMPLATES_FILE'] = agn_param  # parameter file containing which templates will be used
+params['CACHE_FILE'] = f'{output_location}/{field}/{test_title}/tempfilt_{field}_{id_key}_{params["Z_STEP"]}.dat' # template cache file, not used
+params['CATALOG_FILE'] = f'inputs/eazy_auto.cat'  # for cut catalogue created in the earlier cell
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -184,7 +195,7 @@ def eazy_single_template(template):
 
     # Setup for output
     agn_sed = [template]  # AGN templates to be added, comma separated list
-    output_directory = f'outputs/{field}/{test_title}/{field}_{test_title}_{id_key}_{agn_sed}_{use_galaxy_templates}'  # output directory for images
+    output_directory = f'{output_location}/{field}/{test_title}/{field}_{test_title}_{id_key}_{agn_sed}_{use_galaxy_templates}'  # output directory for images
     params['MAIN_OUTPUT_FILE'] = output_directory
 
     agn_template_loader([template], use_galaxy_templates)
@@ -221,18 +232,7 @@ def eazy_single_template(template):
     zmax = 6
     fig = self.zphot_zspec(zmax=zmax)
     fig.savefig(
-        f'outputs/{field}/{test_title}/zphot_zspec_{field}_{id_key}_{params["Z_STEP"]}_{agn_sed}_{use_galaxy_templates}.png')
-
-    # ------------------------------------------------------------------------------------------------------------------
-    # Derived parameters (z params, RF colors, masses, SFR, etc.)
-    warnings.simplefilter('ignore', category=RuntimeWarning)
-    zout, hdu = self.standard_output(simple=False,
-                                     rf_pad_width=0.5, rf_max_err=2,
-                                     prior=True, beta_prior=True,
-                                     absmag_filters=[],
-                                     extra_rf_filters=[])
-
-    # 'zout' also saved to [MAIN_OUTPUT_FILE].zout.fits
+        f'{output_location}/{field}/{test_title}/zphot_zspec_{field}_{id_key}_{params["Z_STEP"]}_{agn_sed}_{use_galaxy_templates}.png')
 
     # ------------------------------------------------------------------------------------------------------------------
     main['ZSPEC'] = self.ZSPEC
@@ -271,7 +271,7 @@ def eazy_single_template(template):
     for i in range(self.fmodel.shape[1]):
         induvidual_data[f'band_{i}'] = self.fmodel[:, i]
     induvidual_data.to_csv(
-        f'outputs/{field}/{test_title}/induvidual_data_{field}_{id_key}_{params["Z_STEP"]}_{agn_sed}_{use_galaxy_templates}.csv',
+        f'{output_location}/{field}/{test_title}/induvidual_data_{field}_{id_key}_{params["Z_STEP"]}_{agn_sed}_{use_galaxy_templates}.csv',
         index=False)
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -281,11 +281,12 @@ no_of_templates = len(agn_temp_all)
 all_time = []
 
 if __name__ == '__main__':
+
     for j in range(no_of_templates):
 
-        pool = mp.Pool(processes=2, maxtasksperchild=1000) #EAZY runs mutliprocessing
+        pool = mp.Pool(processes=4, maxtasksperchild=500)  # EAZY runs mutliprocessing, starting the pool here to avoid memory issues
 
-        i = j + 65
+        i = j
 
         if i >= no_of_templates:
             print('All templates done')
