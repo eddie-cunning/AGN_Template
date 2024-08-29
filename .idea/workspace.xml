@@ -2,35 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="added file to auto run templates, saving flux model information.">
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Arp220_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/BQSO1_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Ell13_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Ell2_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Ell5_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/I19254_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/I20551_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/I22491_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/M82_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Mrk231_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/N6090_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/N6240_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/QSO1_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/QSO2_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/S0_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Sa_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Sb_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Sc_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Sd_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Sdm_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Sey18_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Sey2_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Spi4_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/TQSO1_template_norm.sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/synthetic_templates/Torus_template_norm.sed" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eazy_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Eazy_test.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalogue_prepare.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue_prepare.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/graphing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/eazy_test.cat" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/eazy_test.cat" afterDir="false" />
       <change beforePath="G:/honours/grizli/setup.py" beforeDir="false" afterPath="G:/honours/grizli/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -277,7 +253,7 @@
       <workItem from="1723445163845" duration="27153000" />
       <workItem from="1723662911572" duration="20809000" />
       <workItem from="1723800190712" duration="109993000" />
-      <workItem from="1724639486443" duration="30019000" />
+      <workItem from="1724639486443" duration="35090000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1710795058680</created>
