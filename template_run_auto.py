@@ -42,7 +42,7 @@ warnings.simplefilter('ignore', category=AstropyWarning)
 os.getcwd()
 
 # Load ZFOURGE catalogue from local drive
-test_title = 'individual_bin0.3to0.4_0.05'  # title of the test, eg. 1,2, A, B, Initial.
+test_title = 'individual_combined '  # title of the test, eg. 1,2, A, B, Initial.
 field = 'uds'  # 'cdfs', 'cosmos', or 'uds'
 
 # Choose ID key for the catalogue
