@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="added file to auto run templates, saving flux model information.">
+      <change afterPath="$PROJECT_DIR$/global_settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eazy_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Eazy_test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue_prepare.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue_prepare.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graphing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/graphing.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/eazy_test.cat" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/eazy_test.cat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inputs/eazy_reload.cat" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/eazy_reload.cat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template_auto_reload_graph.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/template_auto_reload_graph.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_converter.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/template_run_auto.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_run_auto.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" afterDir="false" />
       <change beforePath="G:/honours/grizli/setup.py" beforeDir="false" afterPath="G:/honours/grizli/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -69,17 +71,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/eddie/PycharmProjects/SEDTemplate_conda&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/eddie/PycharmProjects/SEDTemplate_conda",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings>
@@ -95,7 +97,7 @@
       <recent name="G:\pycharmprojects" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.template_run_auto">
+  <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="SEDTemplate_conda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -259,7 +261,7 @@
       <workItem from="1723662911572" duration="20809000" />
       <workItem from="1723800190712" duration="109993000" />
       <workItem from="1724639486443" duration="73054000" />
-      <workItem from="1725156249896" duration="8517000" />
+      <workItem from="1725156249896" duration="20179000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1710795058680</created>
@@ -571,6 +573,11 @@
           <url>file://$USER_HOME$/anaconda3/envs/SEDTemplate_conda/Lib/site-packages/eazy/photoz.py</url>
           <line>6141</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/template_run_auto.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

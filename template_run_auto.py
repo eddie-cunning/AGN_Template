@@ -26,6 +26,7 @@ import sys
 import eazy
 import astropy.stats
 import multiprocessing as mp
+import global_settings as gs
 
 np.seterr(all='ignore')
 warnings.simplefilter('ignore', category=AstropyWarning)
@@ -50,43 +51,22 @@ field = 'uds'  # 'cdfs', 'cosmos', or 'uds'
 id_key = 'fraction0.3to0.4'
 
 # Directories for key, name keys anything, just to keep track of any complex object choices made in catalogue_prepare.ipynb
-id_key_dict = {
-    'normal': f'inputs/alternate_catalogues/{field}.normal.cat',
-    'fraction0.0to0.1': f'inputs/alternate_catalogues/{field}.fraction.bin0.0to0.1.cat',
-    'fraction0.1to0.2': f'inputs/alternate_catalogues/{field}.fraction.bin0.1to0.2.cat',
-    'fraction0.2to0.3': f'inputs/alternate_catalogues/{field}.fraction.bin0.2to0.3.cat',
-    'fraction0.3to0.4': f'inputs/alternate_catalogues/{field}.fraction.bin0.3to0.4.cat',
-    'fraction0.4to0.5': f'inputs/alternate_catalogues/{field}.fraction.bin0.4to0.5.cat',
-    'ir_agn': f'inputs/alternate_catalogues/{field}.ir_agn.cat',
-    'radio_agn': f'inputs/alternate_catalogues/{field}.radio_agn.cat',
-    'xray_agn': f'inputs/alternate_catalogues/{field}.xray_agn.cat',
-    'only_agn_0.4': f'inputs/alternate_catalogues/{field}.only_agn_above_0.4.cat',
-    'only_agn_0.5': f'inputs/alternate_catalogues/{field}.only_agn_above_0.5.cat',
-    'lacy': f'inputs/alternate_catalogues/{field}.lacy_wedge.cat',
-    'donley': f'inputs/alternate_catalogues/{field}.donley_wedge.cat',
-    'useflag': f'inputs/alternate_catalogues/{field}.useflag.cat'
-}
+id_key_dict = gs.get_id_dict(field)
+
+template_key = 'atlas_rest'
+
+template_key_dict = gs.get_template_dict()
 
 # AGN templates allocation
-loop_number = 1  # what loop you are on
-
 use_galaxy_templates = True  # set to True to use galaxy templates as well
+
+params = {'Z_STEP': 0.05, 'TEMPLATE_COMBOS': 1, 'APPLY_PRIOR': 'n'}  # setting field specific parameters
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Directories
 output_location = 'G:/honours/outputs'
 if not os.path.isdir(f'{output_location}/{field}/{test_title}'):
     os.makedirs(f'{output_location}/{field}/{test_title}')
-
-# Where to Save number data
-
-key_data_file = f'{output_location}/{field}/{test_title}/{test_title}_data.csv'
-headings = ['id_key', 'zstep', 'loop_number', 'agn_templates', 'galaxy templates', 'total_obj', 'mean_agn_frac',
-            'spec_count', 'outlier_count', 'nmad_val']
-
-key_data = pd.DataFrame(columns=headings)
-if not os.path.isfile(key_data_file):
-    key_data.to_csv(key_data_file, index=False)
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Read the Catalogue
@@ -106,57 +86,10 @@ total_count = len(main)  # all objects in the range
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Load any templates from the AGN template library
-
-temp_param = 'templates/eazy_v1.3.spectra.param'  # basic parameter file, no agn templates
-last_id = 9  # last id in the parameter file
-empty_param = 'templates/eazy_v1.3_empty.param'  # empty parameter file
 agn_param = 'templates/eazy_v1.3_AGN_auto.param'  # parameter file with agn templates
 
-# opening the parameter files, and reading the contents
-with open(temp_param) as f:
-    original_galaxy = f.read()
-
-with open(empty_param) as f:
-    original_empty = f.read()
-
-agn_dir = 'templates/hlsp_agnsedatlas_rest/'  # dir with all agn templates
+agn_dir = template_key_dict[template_key]  # dir with all agn templates
 agn_temp_all = os.listdir(agn_dir)
-
-
-def agn_template_loader(templates, use_galaxy_templates=False):
-
-    """
-    Function to load AGN templates to the parameter file
-    templates: list of templates to be added
-    use_galaxy_templates: set to True to use galaxy templates as well
-    """
-    if use_galaxy_templates:
-        copy_original_galaxy = original_galaxy
-        no_of_templates_added = len(templates)
-        if no_of_templates_added == 0:
-            open(agn_param, 'w').write(copy_original_galaxy)
-            print('No AGN templates added, just using EAZY galaxy templates')
-            return
-        for i in range(no_of_templates_added):
-            current_id = last_id + 1 + i
-            copy_original_galaxy = copy_original_galaxy + f'\n{current_id}   {agn_dir}{agn_temp_all[templates[i]]}   1.0 0 1.0    '
-        open(agn_param, 'w').write(copy_original_galaxy)
-        print(f'AGN templates added to the parameter file, {templates}, {agn_param}, {last_id} galaxy templates used')
-        return
-    else:
-        copy_original_galaxy = original_empty
-        no_of_templates_added = len(templates)
-        if no_of_templates_added == 0:
-            open(agn_param, 'w').write(copy_original_galaxy)
-            print('No AGN templates added, no Galaxy templates used')
-            return
-        for i in range(no_of_templates_added):
-            current_id = 0 + i
-            copy_original_galaxy = copy_original_galaxy + f'\n{current_id}   {agn_dir}{agn_temp_all[templates[i]]}   1.0 0 1.0    '
-            open(agn_param, 'w').write(copy_original_galaxy)
-            print(f'AGN templates added to the parameter file {agn_param}, no galaxy templates used')
-            return
-
 
 # ----------------------------------------------------------------------------------------------------------------------
 # AGN Info
@@ -178,9 +111,7 @@ positive_agn = main[main['bayes.agn.fracAGN'] > 0]
 param_file = 'base.param'  # base parameter file, does not include all information
 translate_file = glob.glob(f'zfourge/{field}/eazy/{field}.*.translate')
 
-params = {}  # setting field specific parameters
 params['Z_STEP'] = 0.05  # redshift step, defines the precision of each fit, 0.005 default
-
 # inputs
 params['TEMPLATES_FILE'] = agn_param  # parameter file containing which templates will be used
 params['CACHE_FILE'] = f'{output_location}/{field}/{test_title}/tempfilt_{field}_{id_key}_{params["Z_STEP"]}.dat' # template cache file, not used
@@ -195,10 +126,11 @@ def eazy_single_template(template):
 
     # Setup for output
     agn_sed = [template]  # AGN templates to be added, comma separated list
-    output_directory = f'{output_location}/{field}/{test_title}/{field}_{test_title}_{id_key}_{agn_sed}_{use_galaxy_templates}'  # output directory for images
+    templates_use = gs.check_temp(agn_sed, agn_temp_all)  # check if all templates are wanted
+    output_directory = f"{output_location}/{field}/{test_title}/{field}_{test_title}_{id_key}_{template_key}_{agn_sed}_{use_galaxy_templates}_{params['Z_STEP']}_{params['TEMPLATE_COMBOS']}" # output directory
     params['MAIN_OUTPUT_FILE'] = output_directory
 
-    agn_template_loader([template], use_galaxy_templates)
+    gs.agn_template_loader(templates_use, agn_param=agn_param, agn_dir=agn_dir, agn_temp_all=agn_temp_all, use_galaxy_templates=use_galaxy_templates)
 
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -230,10 +162,6 @@ def eazy_single_template(template):
 
     # Show zspec-zphot comparison
     zmax = 6
-    fig = self.zphot_zspec(zmax=zmax)
-    fig.savefig(
-        f'{output_location}/{field}/{test_title}/zphot_zspec_{field}_{id_key}_{params["Z_STEP"]}_{agn_sed}_{use_galaxy_templates}.png')
-
     # ------------------------------------------------------------------------------------------------------------------
     main['ZSPEC'] = self.ZSPEC
     main['ZPHOT'] = self.zbest  # adding zspec and zphot to the agn_frac df
@@ -246,33 +174,25 @@ def eazy_single_template(template):
     main_red = main_red.sort_values(by='ZSPEC')  # sort
 
     # total NMAD
-    zspec_nmad = np.array(main_red['ZSPEC'])
-    zphot_nmad = np.array(main_red['ZPHOT'])
-    dz = (zphot_nmad - zspec_nmad) / (1 + zspec_nmad)
-    total_nmad = astropy.stats.mad_std(dz)
-
-    # outliers
-    spec_count = len(dz)
-    catastrophic_limit = 0.15  # catastrophic_limit in eazy code
-    outliers = np.abs(dz) >= catastrophic_limit
-    outliers_count = sum(outliers)
+    total_nmad, outlier_nmad, outlier_count, outlier_fraction = gs.nmad_calc(main_red['ZPHOT'], main_red['ZSPEC'],outlier=True)
+    outlier_scatter = gs.rms_calc(main_red['ZPHOT'], main_red['ZSPEC'], outlier=True)
+    bias = np.median(main_red['ZPHOT'] - main_red['ZSPEC'])
+    spec_count = len(main_red['ZSPEC'])
 
     # ------------------------------------------------------------------------------------------------------------------
 
-    key_data = pd.DataFrame(columns=headings)
-    key_data.loc[0] = [id_key, params['Z_STEP'], loop_number, agn_sed, use_galaxy_templates, total_count, mean_frac,
-                       spec_count, outliers_count, total_nmad]
-    key_data.to_csv(key_data_file, mode='a', index=False, header=False)
+    gs.save_key_data(output_location=output_location, field=field, test_title=test_title,
+                     key_input=[id_key, params['Z_STEP'], template_key, templates_use, use_galaxy_templates,
+                                total_count, mean_frac, spec_count, outlier_count, total_nmad, outlier_nmad,
+                                outlier_scatter, outlier_fraction, bias])
 
-    induvidual_data = pd.DataFrame(columns=['id', 'phot_redshift', 'chi2'])
-    induvidual_data['id'] = self.idx
-    induvidual_data['phot_redshift'] = self.zbest
-    induvidual_data['chi2'] = self.chi2_best
+    individual_data = pd.DataFrame(columns=['id', 'phot_redshift', 'chi2'])
+    individual_data['id'] = self.idx
+    individual_data['phot_redshift'] = self.zbest
+    individual_data['chi2'] = self.chi2_best
     for i in range(self.fmodel.shape[1]):
-        induvidual_data[f'band_{i}'] = self.fmodel[:, i]
-    induvidual_data.to_csv(
-        f'{output_location}/{field}/{test_title}/induvidual_data_{field}_{id_key}_{params["Z_STEP"]}_{agn_sed}_{use_galaxy_templates}.csv',
-        index=False)
+        individual_data[f'band_{i}'] = self.fmodel[:, i]
+    individual_data.to_csv(f'{output_directory}_individual_data.csv', index=False)
     # ------------------------------------------------------------------------------------------------------------------
 
 
