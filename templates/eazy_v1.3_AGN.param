@@ -12,4 +12,90 @@
 #      with current template if combined fits are enabled.
 #
 # Sample entry:
-# 1 [path_to_file]/template1.sed 1.0_lines 14.7 0.2 2,3,5 
+# 1 [path_to_file]/template1.sed 1.0_lines 14.7 0.2 2,3,5
+1   templates/EAZY_v1.1_lines/eazy_v1.1_sed1.dat    1.0 0 1.0   2,3,4,5,6,7,8
+2   templates/EAZY_v1.1_lines/eazy_v1.1_sed2.dat    1.0 0 1.0   3,4,5,6,7,8
+3   templates/EAZY_v1.1_lines/eazy_v1.1_sed3.dat    1.0 0 1.0   4,5,6,7,8
+4   templates/EAZY_v1.1_lines/eazy_v1.1_sed4.dat    1.0 0 1.0   5,6,7,8
+5   templates/EAZY_v1.1_lines/eazy_v1.1_sed5.dat    1.0 0 1.0   6,7,8
+6   templates/EAZY_v1.1_lines/eazy_v1.1_sed6.dat    1.0 0 1.0   7,8
+7   templates/EAZY_v1.1_lines/eazy_v1.1_sed7.dat    1.0 0 1.0   7
+8   templates/Dusty/c09_del_8.6_z_0.019_chab_age09.40_av2.0.dat   1.0 0 1.0    
+9   templates/erb2010_highEW.dat   1.0 0 1.0    
+10   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3227-central-00.50-ngc4569_multi_v1_spec-rest.dat   1.0 0 1.0    
+11   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3227-central-01.00-ngc4569_multi_v1_spec-rest.dat   1.0 0 1.0    
+12   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3227-central-02.00-ngc4569_multi_v1_spec-rest.dat   1.0 0 1.0    
+13   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3227-central-04.00-ngc4569_multi_v1_spec-rest.dat   1.0 0 1.0    
+14   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3227-central-08.00-ngc4569_multi_v1_spec-rest.dat   1.0 0 1.0    
+15   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3227-central-16.00-ngc4569_multi_v1_spec-rest.dat   1.0 0 1.0    
+16   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3227-central-32.00-ngc4569_multi_v1_spec-rest.dat   1.0 0 1.0    
+17   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3227-central-64.00-ngc4569_multi_v1_spec-rest.dat   1.0 0 1.0    
+18   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3227-central_multi_v1_spec-rest.dat   1.0 0 1.0    
+19   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3516-central-00.50-ngc4826_multi_v1_spec-rest.dat   1.0 0 1.0    
+20   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3516-central-01.00-ngc4826_multi_v1_spec-rest.dat   1.0 0 1.0    
+21   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3516-central-02.00-ngc4826_multi_v1_spec-rest.dat   1.0 0 1.0    
+22   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3516-central-04.00-ngc4826_multi_v1_spec-rest.dat   1.0 0 1.0    
+23   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3516-central-08.00-ngc4826_multi_v1_spec-rest.dat   1.0 0 1.0    
+24   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3516-central-16.00-ngc4826_multi_v1_spec-rest.dat   1.0 0 1.0    
+25   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3516-central-32.00-ngc4826_multi_v1_spec-rest.dat   1.0 0 1.0    
+26   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3516-central-64.00-ngc4826_multi_v1_spec-rest.dat   1.0 0 1.0    
+27   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc3516-central_multi_v1_spec-rest.dat   1.0 0 1.0    
+28   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-00.50-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+29   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-00.50-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+30   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-00.50-ngc4559_multi_v1_spec-rest.dat   1.0 0 1.0    
+31   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-01.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+32   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-01.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+33   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-01.00-ngc4559_multi_v1_spec-rest.dat   1.0 0 1.0    
+34   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-02.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+35   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-02.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+36   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-02.00-ngc4559_multi_v1_spec-rest.dat   1.0 0 1.0    
+37   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-04.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+38   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-04.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+39   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-04.00-ngc4559_multi_v1_spec-rest.dat   1.0 0 1.0    
+40   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-08.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+41   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-08.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+42   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-08.00-ngc4559_multi_v1_spec-rest.dat   1.0 0 1.0    
+43   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-16.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+44   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-16.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+45   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-16.00-ngc4559_multi_v1_spec-rest.dat   1.0 0 1.0    
+46   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-32.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+47   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-32.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+48   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-32.00-ngc4559_multi_v1_spec-rest.dat   1.0 0 1.0    
+49   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-64.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+50   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-64.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+51   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central-64.00-ngc4559_multi_v1_spec-rest.dat   1.0 0 1.0    
+52   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4051-central_multi_v1_spec-rest.dat   1.0 0 1.0    
+53   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-00.50-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+54   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-00.50-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+55   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-00.50-ngc4579_multi_v1_spec-rest.dat   1.0 0 1.0    
+56   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-01.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+57   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-01.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+58   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-01.00-ngc4579_multi_v1_spec-rest.dat   1.0 0 1.0    
+59   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-02.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+60   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-02.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+61   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-02.00-ngc4579_multi_v1_spec-rest.dat   1.0 0 1.0    
+62   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-04.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+63   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-04.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+64   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-04.00-ngc4579_multi_v1_spec-rest.dat   1.0 0 1.0    
+65   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-08.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+66   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-08.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+67   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-08.00-ngc4579_multi_v1_spec-rest.dat   1.0 0 1.0    
+68   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-16.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+69   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-16.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+70   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-16.00-ngc4579_multi_v1_spec-rest.dat   1.0 0 1.0    
+71   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-32.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+72   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-32.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+73   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-32.00-ngc4579_multi_v1_spec-rest.dat   1.0 0 1.0    
+74   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-64.00-ngc3310_multi_v1_spec-rest.dat   1.0 0 1.0    
+75   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-64.00-ngc4125_multi_v1_spec-rest.dat   1.0 0 1.0    
+76   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central-64.00-ngc4579_multi_v1_spec-rest.dat   1.0 0 1.0    
+77   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc4151-central_multi_v1_spec-rest.dat   1.0 0 1.0    
+78   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc5548-central-00.50-ngc4138_multi_v1_spec-rest.dat   1.0 0 1.0    
+79   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc5548-central-01.00-ngc4138_multi_v1_spec-rest.dat   1.0 0 1.0    
+80   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc5548-central-02.00-ngc4138_multi_v1_spec-rest.dat   1.0 0 1.0    
+81   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc5548-central-04.00-ngc4138_multi_v1_spec-rest.dat   1.0 0 1.0    
+82   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc5548-central-08.00-ngc4138_multi_v1_spec-rest.dat   1.0 0 1.0    
+83   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc5548-central-16.00-ngc4138_multi_v1_spec-rest.dat   1.0 0 1.0    
+84   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc5548-central-32.00-ngc4138_multi_v1_spec-rest.dat   1.0 0 1.0    
+85   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc5548-central-64.00-ngc4138_multi_v1_spec-rest.dat   1.0 0 1.0    
+86   templates/hlsp_agnsedatlas_rest_composite/hlsp_agnsedatlas_multi_multi_ngc5548-central_multi_v1_spec-rest.dat   1.0 0 1.0    
