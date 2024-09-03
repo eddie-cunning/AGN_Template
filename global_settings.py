@@ -35,7 +35,10 @@ def get_template_dict():
     template_key_dict = {
         'atlas_rest': 'templates/hlsp_agnsedatlas_rest/',
         'atlas_observed': 'templates/hlsp_agnsedatlas_observed/',
-        'atlas_composite': 'templates/hlsp_agnsedatlas_rest_composite/'
+        'atlas_composite': 'templates/hlsp_agnsedatlas_rest_composite/',
+        'atlas_2014': 'templates/hlsp_agnsedatlas_2014/',
+        'atlas_all': 'templates/hlsp_agnsedatlas_all/',
+        'XMM': 'templates/MARA23032010/'
     }
     return template_key_dict
 
@@ -160,7 +163,7 @@ def save_key_data(output_location, field, test_title, key_input):
     """
     import pandas as pd
     key_data_file = f'{output_location}/{field}/{test_title}/{test_title}_data.csv'
-    headings = ['id_key', 'zstep', 'template_key', 'agn_templates', 'galaxy templates', 'total_obj', 'mean_agn_frac',
+    headings = ['id_key', 'zstep', 'template_key', 'agn_templates', 'galaxy templates', 't_combos', 'total_obj', 'mean_agn_frac',
                 'spec_count', 'outlier_count', 'nmad_val', 'outlier_nmad', 'outlier_scatter', 'outlier_fraction',
                 'bias']
 
@@ -178,12 +181,25 @@ def load_individual(output_location, field, test_title, id_key, template_key, ag
     Function to produce a DataFrame from the directory, made to ensure that directories with different naming schemes are picked up
     """
     import pandas as pd
+    import pickle
     output_directory = save_directory(output_location, field, test_title, id_key, template_key, agn_sed, use_galaxy_templates, z_step, t_combos, *args)
     try:
-        return pd.read_csv(f'{output_directory}_individual_data.csv.csv')
-    except:
-        return pd.read_csv(
-            f'{output_location}/{field}/{test_title}/induvidual_data_{field}_{id_key}_{z_step}_{agn_sed}_{use_galaxy_templates}.csv')
+        with open(f'{output_directory}_individual_data.pkl', 'rb') as file:
+            self = pickle.load(file)
+
+        individual_data = pd.DataFrame(columns=['id', 'phot_redshift', 'chi2'])
+        individual_data['id'] = self.idx
+        individual_data['phot_redshift'] = self.zbest
+        individual_data['chi2'] = self.chi2_best
+        for i in range(self.fmodel.shape[1]):
+            individual_data[f'band_{i}'] = self.fmodel[:,i]
+        return individual_data
+    except (FileNotFoundError, pickle.UnpicklingError, EOFError, AttributeError):
+        try:
+            return pd.read_csv(f'{output_directory}_individual_data.csv')
+        except (FileNotFoundError, PermissionError):
+            return pd.read_csv(
+                f'{output_location}/{field}/{test_title}/induvidual_data_{field}_{id_key}_{z_step}_{agn_sed}_{use_galaxy_templates}.csv')
 
 def load_key_data(output_location, field, test_title):
     """
@@ -191,3 +207,54 @@ def load_key_data(output_location, field, test_title):
     """
     import pandas as pd
     return pd.read_csv(f'{output_location}/{field}/{test_title}/{test_title}_data.csv')
+
+
+def load_self(main, output_location, field, test_title, id_key, template_key, agn_sed, use_galaxy_templates, z_step, t_combos, *args):
+    """
+    Function to load the self object
+    """
+    import pickle
+
+
+    output_directory = save_directory(output_location, field, test_title, id_key, template_key, agn_sed, use_galaxy_templates, z_step, t_combos, *args)
+
+    try:
+        with open(f'{output_directory}_individual_data.pkl', 'rb') as file:
+            return pickle.load(file)
+    except (FileNotFoundError, pickle.UnpicklingError, EOFError, AttributeError):
+        # need to load the individual data and then create the self object
+        # Loading values that are present in catalog, done at the end of EAZY_test.py
+        import pandas as pd
+        import numpy as np
+        columns_to_drop = ['id', 'phot_redshift', 'chi2']
+        spec_data = pd.read_csv(f'{output_location}/{field}/spec_data.csv')
+
+        reindex_list = list(main['id'])
+        reindex_val = [x - 1 for x in reindex_list]  # cat is indexed from 1, not 0
+        reindex_sel = spec_data['id'].isin(list(reindex_val))
+        spec_data = spec_data[reindex_sel].reset_index(drop=True)
+
+        filter_data = pd.read_csv(f'{output_location}/{field}/filter_data.csv')
+        flux_data = pd.read_csv(f'{output_location}/{field}/flux_data.csv')
+
+        filter_error = flux_data.filter(regex='^e_')
+        filter_error = filter_error[reindex_sel].reset_index(drop=True)
+        filter_flux = flux_data.filter(regex='^f_')
+        filter_flux = filter_flux[reindex_sel].reset_index(drop=True)
+
+        individual_df = load_individual(output_location, field, test_title, id_key, template_key, agn_sed, use_galaxy_templates, z_step, t_combos, *args)
+
+        class self_load:
+            def __init__(self, idx, ZSPEC, ZBEST, fnu, efnu, efmodel, pivot, zbest, chi2_best, NFILT):
+                self.idx = np.array(main['id'].index)
+                self.ZSPEC = np.array(spec_data['zspec'])
+                self.fnu = np.array(filter_flux)
+                self.efnu = np.array(filter_error)
+                self.fmodel = np.array(individual_df.drop(columns=columns_to_drop))
+                self.pivot = np.array(filter_data['pivot'])
+                self.zbest = np.array(individual_df['phot_redshift'])
+                self.chi2_best = np.array(individual_df['chi2'])
+                self.NFILT = len(filter_data)
+
+        return self_load(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+

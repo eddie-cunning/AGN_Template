@@ -27,6 +27,7 @@ import eazy
 import astropy.stats
 import multiprocessing as mp
 import global_settings as gs
+import pickle
 
 np.seterr(all='ignore')
 warnings.simplefilter('ignore', category=AstropyWarning)
@@ -43,97 +44,88 @@ warnings.simplefilter('ignore', category=AstropyWarning)
 os.getcwd()
 
 # Load ZFOURGE catalogue from local drive
-test_title = 'individual_combined '  # title of the test, eg. 1,2, A, B, Initial.
-field = 'uds'  # 'cdfs', 'cosmos', or 'uds'
-
-# Choose ID key for the catalogue
-# A key designates what object you want included
-id_key = 'fraction0.3to0.4'
-
-# Directories for key, name keys anything, just to keep track of any complex object choices made in catalogue_prepare.ipynb
-id_key_dict = gs.get_id_dict(field)
-
-template_key = 'atlas_rest'
-
-template_key_dict = gs.get_template_dict()
-
-# AGN templates allocation
-use_galaxy_templates = True  # set to True to use galaxy templates as well
-
-params = {'Z_STEP': 0.05, 'TEMPLATE_COMBOS': 1, 'APPLY_PRIOR': 'n'}  # setting field specific parameters
+test_title = 'individual_single_temp_fits'  # title of the test, eg. 1,2, A, B, Initial.
+template_key_dict = gs.get_template_dict() # loading is the same for any test, so it can be done here
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Directories
 output_location = 'G:/honours/outputs'
-if not os.path.isdir(f'{output_location}/{field}/{test_title}'):
-    os.makedirs(f'{output_location}/{field}/{test_title}')
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Read the Catalogue
-
-main_cat = pd.read_csv(id_key_dict[id_key])  # get the catalogue for the id_key
-main_cat.to_csv('inputs/eazy_auto.cat',
-                index=False)  # create a new catalogue, allows for change to be made in this cell
-
-# Setting up the main catalogue
-main = pd.read_csv('inputs/eazy_auto.cat', sep=" ", comment="#", header=None,
-                   skipinitialspace=True)  # opening cut cat, and adjusting it
-headers = pd.read_csv('inputs/eazy_auto.cat', sep=" ", header=None, nrows=1).iloc[0]
-headers = headers[1:]
-main.columns = headers
-
-total_count = len(main)  # all objects in the range
-
-# ----------------------------------------------------------------------------------------------------------------------
-# Load any templates from the AGN template library
-agn_param = 'templates/eazy_v1.3_AGN_auto.param'  # parameter file with agn templates
-
-agn_dir = template_key_dict[template_key]  # dir with all agn templates
-agn_temp_all = os.listdir(agn_dir)
-
-# ----------------------------------------------------------------------------------------------------------------------
-# AGN Info
-agn_per_dir = f'inputs/{field}_agn_frac.txt'  # file with AGN fractions for each object, prepared in catalogue_prepare.ipynb
-all_bayes = pd.read_csv(agn_per_dir, sep="\s+", comment='#')
-main = pd.merge(main, all_bayes, on='id', how='left')  # AGN fraction for each object
-
-has_fraction = 'bayes.agn.fracAGN' in main.columns
-if not has_fraction:
-    main = pd.merge(main, all_bayes, on='id', how='left') # AGN fraction for each object
-
-mean_frac = np.mean(main['bayes.agn.fracAGN'])
-positive_agn = main[main['bayes.agn.fracAGN'] > 0]
-# ----------------------------------------------------------------------------------------------------------------------
-
 # EAZY parameters
 
 # following files should be in the same dir as the project
 param_file = 'base.param'  # base parameter file, does not include all information
-translate_file = glob.glob(f'zfourge/{field}/eazy/{field}.*.translate')
-
-params['Z_STEP'] = 0.05  # redshift step, defines the precision of each fit, 0.005 default
-# inputs
-params['TEMPLATES_FILE'] = agn_param  # parameter file containing which templates will be used
-params['CACHE_FILE'] = f'{output_location}/{field}/{test_title}/tempfilt_{field}_{id_key}_{params["Z_STEP"]}.dat' # template cache file, not used
-params['CATALOG_FILE'] = f'inputs/eazy_auto.cat'  # for cut catalogue created in the earlier cell
-
-
+params = {}
+params['CATALOG FILE'] = 'inputs/eazy_auto.cat'
 # ----------------------------------------------------------------------------------------------------------------------
-def eazy_single_template(template):
+
+
+def eazy_single_template(template, field, id_key, template_key, use_galaxy_templates, use_prior, template_combos, z_step):
     """
     Function to run EAZY for a single template, given by the number identifier
     """
+    if not os.path.isdir(f'{output_location}/{field}/{test_title}'):
+        os.makedirs(f'{output_location}/{field}/{test_title}')
 
+    # ------------------------------------------------------------------------------------------------------------------
+    field = field
+    id_key = id_key
+    template_key = template_key
+    id_key_dict = gs.get_id_dict(field)
+    template_key = template_key
+
+    # AGN templates allocation
+    use_galaxy_templates = use_galaxy_templates  # set to True to use galaxy templates as well
+    # Load any templates from the AGN template library
+    agn_param = 'templates/eazy_v1.3_AGN_auto.param'  # parameter file with agn templates
+
+    agn_dir = template_key_dict[template_key]  # dir with all agn templates
+    agn_temp_all = os.listdir(agn_dir)
+
+    params['Z_STEP'] = z_step
+    params['TEMPLATE_COMBOS'] = template_combos
+    params['APPLY_PRIOR'] = use_prior
+    params['TEMPLATES_FILE'] = agn_param
+    params['CACHE_FILE'] = f'{output_location}/{field}/{test_title}/tempfilt_{field}_{id_key}_{z_step}.dat'
+    translate_file = glob.glob(f'zfourge/{field}/eazy/{field}.*.translate')
+    # ------------------------------------------------------------------------------------------------------------------
+    # Read the Catalogue
+
+    main_cat = pd.read_csv(id_key_dict[id_key])  # get the catalogue for the id_key
+    main_cat.to_csv('inputs/eazy_auto.cat',
+                    index=False)  # create a new catalogue, allows for change to be made in this cell
+
+    # Setting up the main catalogue
+    main = pd.read_csv('inputs/eazy_auto.cat', sep=" ", comment="#", header=None,
+                       skipinitialspace=True)  # opening cut cat, and adjusting it
+    headers = pd.read_csv('inputs/eazy_auto.cat', sep=" ", header=None, nrows=1).iloc[0]
+    headers = headers[1:]
+    main.columns = headers
+
+    total_count = len(main)  # all objects in the range
+    # ------------------------------------------------------------------------------------------------------------------
+    # AGN Info
+    agn_per_dir = f'inputs/{field}_agn_frac.txt'  # file with AGN fractions for each object, prepared in catalogue_prepare.ipynb
+    all_bayes = pd.read_csv(agn_per_dir, sep="\s+", comment='#')
+    main = pd.merge(main, all_bayes, on='id', how='left')  # AGN fraction for each object
+
+    has_fraction = 'bayes.agn.fracAGN' in main.columns
+    if not has_fraction:
+        main = pd.merge(main, all_bayes, on='id', how='left')  # AGN fraction for each object
+
+    mean_frac = np.mean(main['bayes.agn.fracAGN'])
+    # ------------------------------------------------------------------------------------------------------------------
     # Setup for output
-    agn_sed = [template]  # AGN templates to be added, comma separated list
-    templates_use = gs.check_temp(agn_sed, agn_temp_all)  # check if all templates are wanted
-    output_directory = f"{output_location}/{field}/{test_title}/{field}_{test_title}_{id_key}_{template_key}_{agn_sed}_{use_galaxy_templates}_{params['Z_STEP']}_{params['TEMPLATE_COMBOS']}" # output directory
+    agn_sed = template  # AGN templates to be added, comma separated list
+    templates_use = gs.check_template(agn_sed, agn_temp_all)  # check if all templates are wanted
+    output_directory = gs.save_directory(output_location, field, test_title, id_key, template_key, agn_sed, use_galaxy_templates, z_step, template_combos) # output directory
     params['MAIN_OUTPUT_FILE'] = output_directory
 
     gs.agn_template_loader(templates_use, agn_param=agn_param, agn_dir=agn_dir, agn_temp_all=agn_temp_all, use_galaxy_templates=use_galaxy_templates)
 
     # ------------------------------------------------------------------------------------------------------------------
-
+    print(params)
     self = eazy.photoz.PhotoZ(param_file=param_file, translate_file=translate_file[0], zeropoint_file=None,
                               params=params, load_prior=True, load_products=False)
 
@@ -174,7 +166,7 @@ def eazy_single_template(template):
     main_red = main_red.sort_values(by='ZSPEC')  # sort
 
     # total NMAD
-    total_nmad, outlier_nmad, outlier_count, outlier_fraction = gs.nmad_calc(main_red['ZPHOT'], main_red['ZSPEC'],outlier=True)
+    total_nmad, outlier_nmad, outlier_count, outlier_fraction = gs.nmad_calc(main_red['ZPHOT'], main_red['ZSPEC'], outlier=True)
     outlier_scatter = gs.rms_calc(main_red['ZPHOT'], main_red['ZSPEC'], outlier=True)
     bias = np.median(main_red['ZPHOT'] - main_red['ZSPEC'])
     spec_count = len(main_red['ZSPEC'])
@@ -183,39 +175,73 @@ def eazy_single_template(template):
 
     gs.save_key_data(output_location=output_location, field=field, test_title=test_title,
                      key_input=[id_key, params['Z_STEP'], template_key, templates_use, use_galaxy_templates,
-                                total_count, mean_frac, spec_count, outlier_count, total_nmad, outlier_nmad,
-                                outlier_scatter, outlier_fraction, bias])
+                                template_combos, total_count, mean_frac, spec_count, outlier_count, total_nmad,
+                                outlier_nmad, outlier_scatter, outlier_fraction, bias])
 
-    individual_data = pd.DataFrame(columns=['id', 'phot_redshift', 'chi2'])
-    individual_data['id'] = self.idx
-    individual_data['phot_redshift'] = self.zbest
-    individual_data['chi2'] = self.chi2_best
-    for i in range(self.fmodel.shape[1]):
-        individual_data[f'band_{i}'] = self.fmodel[:, i]
-    individual_data.to_csv(f'{output_directory}_individual_data.csv', index=False)
+    with open(f'{output_directory}_individual_data.pkl', 'wb') as file:
+        pickle.dump(self, file)
     # ------------------------------------------------------------------------------------------------------------------
 
 
 # Looping
-no_of_templates = len(agn_temp_all)
 all_time = []
+all_fields = ['uds', 'cosmos', 'uds']
+all_id_keys = ['normal', 'lacy', 'donley', 'only_agn_0.4']
+all_template_keys = ['atlas_rest', 'atlas_all', 'EAZY']
+templates = {'atlas_rest': 'all', 'atlas_all': 'all'} # what templates for each key
 
 if __name__ == '__main__':
 
-    for j in range(no_of_templates):
+    for field in all_fields:
+        for id_key in all_id_keys:
+            for template_key in all_template_keys:
 
-        pool = mp.Pool(processes=4, maxtasksperchild=500)  # EAZY runs mutliprocessing, starting the pool here to avoid memory issues
+                pool = mp.Pool(processes=4,
+                               maxtasksperchild=500)  # EAZY runs mutliprocessing, starting the pool here to avoid memory issues
+                all_time.append(time.ctime())
 
-        i = j
+                if template_key == 'EAZY': # Want to run only the eazy templates
+                    agn_sed = 'all' # doesn't matter here
+                    use_galaxy_templates = True
+                    z_step = 0.05
+                    t_combos = 'a'
+                    use_prior = 'y'
+                    eazy_single_template(agn_sed, field, id_key, template_key, use_galaxy_templates, use_prior, t_combos, z_step)
+                else:
+                    for template1 in templates[template_key]:
+                        template2 = template1 # if the loop crashes, change this to start at any template
+                        agn_sed = 'all'  # doesn't matter here
+                        use_galaxy_templates = False
+                        z_step = 0.05
+                        t_combos = 1
+                        use_prior = 'n'
+                        eazy_single_template(agn_sed, field, id_key, template_key, use_galaxy_templates, use_prior,
+                                             t_combos, z_step)
 
-        if i >= no_of_templates:
-            print('All templates done')
-            break
+                pool.close()
+                print(all_time)
+                print('--------------------------------------------------------------')
 
-        all_time.append(time.ctime())
-        eazy_single_template(i)
-        pool.close()
-
-        print(f'template {i} done')
-        print(all_time)
-        print('--------------------------------------------------------------')
+# # Looping
+# no_of_templates = len(agn_temp_all)
+# all_time = []
+#
+# if __name__ == '__main__':
+#
+#     for j in range(no_of_templates):
+#
+#         pool = mp.Pool(processes=4, maxtasksperchild=500)  # EAZY runs mutliprocessing, starting the pool here to avoid memory issues
+#
+#         i = j
+#
+#         if i >= no_of_templates:
+#             print('All templates done')
+#             break
+#
+#         all_time.append(time.ctime())
+#         eazy_single_template(i)
+#         pool.close()
+#
+#         print(f'template {i} done')
+#         print(all_time)
+#         print('--------------------------------------------------------------')
