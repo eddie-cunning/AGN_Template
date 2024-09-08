@@ -1,17 +1,7 @@
 # will run each template individually
 # each test needs a new test name, otherwise ti will append to the old name directory and main file.
 # change the key, field, zstep for each test
-# for each EAZY run, the following parameters will be returned:
-"""
-    - object ID
-    - template
-    - NMAD
-    - outlier count
-    The following will be in a new file as they are per object:
-    - flux density model
-    - phot redshift
-    - chi2
-"""
+# for each EAZY run, saves the self object to a pickle file, which can be loaded and used for further analysis
 # ----------------------------------------------------------------------------------------------------------------------
 import os
 import glob
@@ -56,8 +46,8 @@ output_location = 'G:/honours/outputs'
 
 # following files should be in the same dir as the project
 param_file = 'base.param'  # base parameter file, does not include all information
-params = {}
-params['CATALOG FILE'] = 'inputs/eazy_auto.cat'
+agn_param = 'templates/eazy_v1.3_AGN_auto.param'  # parameter file with agn templates
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 
@@ -78,12 +68,13 @@ def eazy_single_template(template, field, id_key, template_key, use_galaxy_templ
     # AGN templates allocation
     use_galaxy_templates = use_galaxy_templates  # set to True to use galaxy templates as well
     # Load any templates from the AGN template library
-    agn_param = 'templates/eazy_v1.3_AGN_auto.param'  # parameter file with agn templates
 
     agn_dir = template_key_dict[template_key]  # dir with all agn templates
     agn_temp_all = os.listdir(agn_dir)
 
+    params = {}
     params['Z_STEP'] = z_step
+    params['CATALOG_FILE'] = 'inputs/eazy_auto.cat'
     params['TEMPLATE_COMBOS'] = template_combos
     params['APPLY_PRIOR'] = use_prior
     params['TEMPLATES_FILE'] = agn_param
@@ -166,6 +157,7 @@ def eazy_single_template(template, field, id_key, template_key, use_galaxy_templ
     main_red = main_red.sort_values(by='ZSPEC')  # sort
 
     # total NMAD
+    self.crps_val = gs.crps(self.lnp, self.zgrid, self.ZSPEC)
     total_nmad, outlier_nmad, outlier_count, outlier_fraction = gs.nmad_calc(main_red['ZPHOT'], main_red['ZSPEC'], outlier=True)
     outlier_scatter = gs.rms_calc(main_red['ZPHOT'], main_red['ZSPEC'], outlier=True)
     bias = np.median(main_red['ZPHOT'] - main_red['ZSPEC'])
@@ -174,9 +166,9 @@ def eazy_single_template(template, field, id_key, template_key, use_galaxy_templ
     # ------------------------------------------------------------------------------------------------------------------
 
     gs.save_key_data(output_location=output_location, field=field, test_title=test_title,
-                     key_input=[id_key, params['Z_STEP'], template_key, templates_use, use_galaxy_templates,
+                     key_input=[id_key, z_step, template_key, templates_use, use_galaxy_templates,
                                 template_combos, total_count, mean_frac, spec_count, outlier_count, total_nmad,
-                                outlier_nmad, outlier_scatter, outlier_fraction, bias])
+                                outlier_nmad, outlier_scatter, outlier_fraction, bias, np.nanmean(self.crps_val)])
 
     with open(f'{output_directory}_individual_data.pkl', 'wb') as file:
         pickle.dump(self, file)
@@ -185,10 +177,10 @@ def eazy_single_template(template, field, id_key, template_key, use_galaxy_templ
 
 # Looping
 all_time = []
-all_fields = ['uds', 'cosmos', 'uds']
-all_id_keys = ['normal', 'lacy', 'donley', 'only_agn_0.4']
-all_template_keys = ['atlas_rest', 'atlas_all', 'EAZY']
-templates = {'atlas_rest': 'all', 'atlas_all': 'all'} # what templates for each key
+all_fields = ['cdfs2', 'cosmos2', 'uds']
+all_id_keys = ['normal', 'lacy', 'donley', 'only_agn_0.4', 'xray_agn']
+all_template_keys = ['EAZY', 'atlas_rest', 'atlas_all', 'XMM']
+templates = {'atlas_rest': ['all'], 'atlas_all': ['all'], 'XMM': ['all']} # what templates for each key
 
 if __name__ == '__main__':
 
@@ -201,12 +193,13 @@ if __name__ == '__main__':
                 all_time.append(time.ctime())
 
                 if template_key == 'EAZY': # Want to run only the eazy templates
-                    agn_sed = 'all' # doesn't matter here
+                    agn_sed = []
+                    template_set = 'atlas_rest' # doesn't matter here
                     use_galaxy_templates = True
                     z_step = 0.05
                     t_combos = 'a'
                     use_prior = 'y'
-                    eazy_single_template(agn_sed, field, id_key, template_key, use_galaxy_templates, use_prior, t_combos, z_step)
+                    eazy_single_template(agn_sed, field, id_key, template_set, use_galaxy_templates, use_prior, t_combos, z_step)
                 else:
                     for template1 in templates[template_key]:
                         template2 = template1 # if the loop crashes, change this to start at any template

@@ -2,8 +2,10 @@
 
 import os
 
+
 def is_working():
     print('Working')
+
 
 def get_id_dict(field):
     """
@@ -58,7 +60,12 @@ def nmad_calc(phot, spec, outlier=False):
     diff = (phot - spec) / (1 + spec)
     if outlier:
         diff_noout = diff[abs(diff) < catastrophic_limit]
-        return 1.4826 * np.median(abs(diff - np.median(diff))), 1.4826 * np.median(abs(diff_noout - np.median(diff_noout))), len(diff) - len(diff_noout), 1-(len(diff_noout) / len(phot))
+        outlier_count = len(diff) - len(diff_noout)
+        if len(diff_noout) == 0:
+            # if there are no non-outliers
+            return 1.4826 * np.median(abs(diff - np.median(diff))), np.nan, outlier_count, 1
+        outlier_fraction = 1 - (len(diff_noout) / len(phot))
+        return 1.4826 * np.median(abs(diff - np.median(diff))), 1.4826 * np.median(abs(diff_noout - np.median(diff_noout))), outlier_count, outlier_fraction
     else:
         return 1.4826 * np.median(abs(diff - np.median(diff)))
 
@@ -139,6 +146,23 @@ def check_template(agn_sed, agn_temp_all):
         return agn_sed
 
 
+def inv_check_template(agn_sed, template_key):
+    """
+    Check if the agn_sed is 'all' agn templates in directory through a length match. Try to avoid using 2 of the same template, as this will cause an unmentioned error
+    """
+    import glob
+
+    if len(agn_sed) == 2: # if just square brackets
+        return agn_sed
+
+    agn_sed = [int(item) for item in agn_sed[1:-1].split(',')]  # convert string to list
+    agn_temp_all = glob.glob(get_template_dict()[template_key] + '*')
+    if len(list(agn_sed)) == len(agn_temp_all):
+        return 'all'
+    else:
+        return agn_sed
+
+
 def save_directory(output_location, field, test_title, id_key, template_key, agn_sed, use_galaxy_templates, z_step, t_combos, *args):
     """
     Function to produce a directory for saving the results
@@ -165,7 +189,7 @@ def save_key_data(output_location, field, test_title, key_input):
     key_data_file = f'{output_location}/{field}/{test_title}/{test_title}_data.csv'
     headings = ['id_key', 'zstep', 'template_key', 'agn_templates', 'galaxy templates', 't_combos', 'total_obj', 'mean_agn_frac',
                 'spec_count', 'outlier_count', 'nmad_val', 'outlier_nmad', 'outlier_scatter', 'outlier_fraction',
-                'bias']
+                'bias', 'mean CRPS']
 
     key_data = pd.DataFrame(columns=headings)
     if not os.path.isfile(key_data_file):
@@ -201,6 +225,7 @@ def load_individual(output_location, field, test_title, id_key, template_key, ag
             return pd.read_csv(
                 f'{output_location}/{field}/{test_title}/induvidual_data_{field}_{id_key}_{z_step}_{agn_sed}_{use_galaxy_templates}.csv')
 
+
 def load_key_data(output_location, field, test_title):
     """
     Function to load the key data
@@ -214,7 +239,6 @@ def load_self(main, output_location, field, test_title, id_key, template_key, ag
     Function to load the self object
     """
     import pickle
-
 
     output_directory = save_directory(output_location, field, test_title, id_key, template_key, agn_sed, use_galaxy_templates, z_step, t_combos, *args)
 
@@ -258,3 +282,116 @@ def load_self(main, output_location, field, test_title, id_key, template_key, ag
 
         return self_load(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
+
+def normalizer(data):
+    """
+    Normalizes the data to a 0-1 scale
+    """
+    return (data - min(data)) / (max(data) - min(data))
+
+
+def normalize_by_sum(data):
+    """
+    Normalizes the data by the sum
+    """
+    return data / sum(data)
+
+
+def heaviside(data, threshold):
+    """
+    Heaviside function, 0 if less than, 1 if more than
+    """
+    import numpy as np
+    data_copy = np.copy(data)
+    for i in range(len(data)):
+        if data_copy[i] >= threshold:
+            data_copy[i] = 1
+        else:
+            data_copy[i] = 0
+    return data_copy
+
+
+
+
+def crps(lnp, zgrid_prob, zspec_prob, zmin=0.005):
+    """
+    Compute the Continuous Ranked Probability Score (CRPS), which is an assessment on the quality of the PDF
+    """
+    import numpy as np
+    unlog_prob = np.exp(lnp)
+    nobj = len(zspec_prob)
+    crps_values = np.zeros(nobj)
+    for i in range(nobj):
+        if zspec_prob[i] <= zmin:
+            crps_values[i] = np.nan
+            continue
+        cdf = normalizer(np.cumsum(unlog_prob[i]))
+        crps_values[i] = np.trapz((cdf - heaviside(zgrid_prob, zspec_prob[i]))**2, zgrid_prob)
+    return crps_values
+
+
+def flux_to_mag(flux):
+    """
+    Converts flux to magnitude
+    """
+    import numpy as np
+    return -2.5 * np.log10(flux) + 25
+
+
+def redshifter(bands, redshift):
+    """
+    Redshifts the bands
+    """
+    return bands / (1 + redshift)
+
+
+def parabola_fit(zgrid, lnp):
+    """
+    Analytic parabola fit from get_maxlnp_redshift in eazy.py, adjusted slightly
+    """
+    import numpy as np
+
+    izmax = np.argmax(lnp) # index of the maximum value
+
+    if izmax == 0 or izmax == len(lnp) - 1: # if the maximum value is at the edge
+        return -99, -99
+
+    # gets the 3 points around the maximum value
+    x = np.array(zgrid[izmax-1 : izmax+2])
+    y = np.array(lnp[izmax-1 : izmax+2])
+
+    dx = np.diff(x).T
+    dx2 = np.diff(x ** 2).T
+    dy = np.diff(y).T
+
+    c2 = (dy[1] / dx[1] - dy[0] / dx[0]) / (dx2[1] / dx[1] - dx2[0] / dx[0])
+    c1 = (dy[0] - c2 * dx2[0]) / dx[0]
+    c0 = y.T[0] - c1 * x.T[0] - c2 * x.T[0] ** 2
+
+    zbest = -c1 / 2 / c2
+    lnpmax = c2 * zbest ** 2 + c1 * zbest + c0
+
+    return zbest, lnpmax
+
+
+def prob_adder(lnps):
+    """
+    Adds the probabilities of the lnps
+    """
+    import numpy as np
+
+    all_prob = np.zeros_like(lnps[0])
+    for lnp in lnps:
+        all_prob += np.exp(lnp)
+
+    all_prob = normalize_by_sum(all_prob)
+
+    return all_prob
+
+
+def return_prob(lnp):
+    """
+    Returns the probability of the lnp
+    """
+    import numpy as np
+    return np.exp(lnp)
