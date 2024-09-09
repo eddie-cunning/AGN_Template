@@ -2,304 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="added file to auto run templates, saving flux model information.">
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs2.all_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs2.donley_wedge.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs2.ir_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs2.lacy_wedge.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs2.no_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs2.normal.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs2.only_agn_above_0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs2.radio_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs2.useflag.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs2.xray_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cosmos2.all_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cosmos2.donley_wedge.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cosmos2.ir_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cosmos2.lacy_wedge.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cosmos2.no_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cosmos2.normal.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cosmos2.only_agn_above_0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cosmos2.radio_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cosmos2.useflag.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cosmos2.xray_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/uds.all_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/uds.ir_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/uds.no_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/uds.radio_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/uds.xray_agn.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/cdfs2_agn_frac.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputs/cosmos2_agn_frac.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/._.DS_Store" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/._calibrations" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/._cdfs.v1.6.11.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/._cdfs.v1.6.9.radio.v0.3.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/._cdfs.v1.6.9.vdw.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/._cdfs.v1.6.9.xray.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/._cdfs.v1.6.9.zout" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/._cdfs.v1.6.9.zspec.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/._eazy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/._fast" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/._readme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._.DS_Store" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._CDFS_nmad_v1.6.2.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._FILTER.RES.DR34.latest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._FILTER.RES.latest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._MipsFilter_24um.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._PacsFilter_100um.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._PacsFilter_160um.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._TEMPLATE_ERROR.v2.0.zfourge" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._cdfs.se.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._cdfs_zp.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._gal_ext.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._template_W08.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/._templates" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/CDFS_nmad_v1.6.2.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/FILTER.RES.DR34.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/FILTER.RES.DR34.latest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/FILTER.RES.latest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/MipsFilter_24um.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/PacsFilter_100um.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/PacsFilter_160um.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/TEMPLATE_ERROR.v2.0.zfourge" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/cdfs.se.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/cdfs_zp.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/gal_ext.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/template_W08.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._DLAcoeff.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._LAFcoeff.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._eazy_v1.1_sed1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._eazy_v1.1_sed2.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._eazy_v1.1_sed3.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._eazy_v1.1_sed4.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._eazy_v1.1_sed5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._eazy_v1.1_sed6.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._eazy_v1.1_sed7.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._erb2010_highEW.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._lambda_v1.1.def.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._prior_K_TAO.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/._spectra.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/DLAcoeff.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/LAFcoeff.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/c09_del_8.6_z_0.019_chab_age09.40_av2.0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/eazy_v1.1_sed1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/eazy_v1.1_sed2.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/eazy_v1.1_sed3.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/eazy_v1.1_sed4.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/eazy_v1.1_sed5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/eazy_v1.1_sed6.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/eazy_v1.1_sed7.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/erb2010_highEW.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/lambda_v1.1.def.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/prior_K_TAO.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/calibrations/templates/spectra.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/cdfs.v1.6.9.3dhst.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/cdfs.v1.6.9.fout" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/cdfs.v1.6.9.herschel.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/cdfs.v1.6.9.radio.v0.3.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/cdfs.v1.6.9.rest.v0.9.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/cdfs.v1.6.9.sfr.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/cdfs.v1.6.9.vdw.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/cdfs.v1.6.9.xray.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/cdfs.v1.6.9.zout" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/cdfs.v1.6.9.zspec.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/cdfs2.v1.6.11.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/cdfs2.v1.6.9.agn.v0.5.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._.DS_Store" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.153.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.153.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.155.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.155.rf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.155.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.161.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.161.rf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.161.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.274.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.274.rf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.274.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.readbin.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.temp_sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.tempfilt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._cdfs.v1.6.9.zbin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/._zphot.param.default" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.153.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.153.rf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.153.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.155.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.155.rf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.155.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.161.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.161.rf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.161.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.274.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.274.rf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.274.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.readbin.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.temp_sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.tempfilt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.zbin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs.v1.6.9.zout" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/cdfs2.v1.6.9.translate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/eazy/zphot.param.default" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/._readme_3dhst.v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/._readme_agn.v0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/._readme_radio.v0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/._readme_vdw_v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/._readme_xray.v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/._readme_zspec.v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/readme_3dhst.v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/readme_agn.v0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/readme_radio.v0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/readme_restframe.v0.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/readme_sfr.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/readme_vdw_v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/readme_xray.v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cdfs2/readme/readme_zspec.v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._.DS_Store" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._calibrations" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._cosmos.v1.3.6.3dhst.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._cosmos.v1.3.6.agn.v0.5.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._cosmos.v1.3.6.radio.v0.3.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._cosmos.v1.3.6.sfr.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._cosmos.v1.3.6.vdw.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._cosmos.v1.3.6.xray.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._cosmos.v1.3.6.zout" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._cosmos.v1.3.6.zspec.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._cosmos.v1.3.8.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._eazy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._fast" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/._readme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._.DS_Store" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._COSMOS_nmad_v1.3.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._FILTER.RES.DR34.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._FILTER.RES.DR34.latest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._MipsFilter_24um.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._PacsFilter_100um.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._PacsFilter_160um.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._TEMPLATE_ERROR.v2.0.zfourge" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._cosmos.se.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._cosmos_zp.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._gal_ext.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._template_W08.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/._templates" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/COSMOS_nmad_v1.3.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/FILTER.RES.DR34.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/FILTER.RES.DR34.latest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/MipsFilter_24um.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/PacsFilter_100um.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/PacsFilter_160um.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/TEMPLATE_ERROR.v2.0.zfourge" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/cosmos.se.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/cosmos_zp.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/gal_ext.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/template_W08.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._DLAcoeff.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._LAFcoeff.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._c09_del_8.6_z_0.019_chab_age09.40_av2.0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._eazy_v1.1_sed1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._eazy_v1.1_sed2.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._eazy_v1.1_sed3.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._eazy_v1.1_sed4.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._eazy_v1.1_sed5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._eazy_v1.1_sed6.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._eazy_v1.1_sed7.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._erb2010_highEW.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._lambda_v1.1.def.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._prior_K_TAO.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._spectra.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/._template_W08.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/DLAcoeff.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/LAFcoeff.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/c09_del_8.6_z_0.019_chab_age09.40_av2.0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/eazy_v1.1_sed1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/eazy_v1.1_sed2.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/eazy_v1.1_sed3.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/eazy_v1.1_sed4.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/eazy_v1.1_sed5.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/eazy_v1.1_sed6.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/eazy_v1.1_sed7.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/erb2010_highEW.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/lambda_v1.1.def.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/prior_K_TAO.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/spectra.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/calibrations/templates/template_W08.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/cosmos.v1.3.6.3dhst.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/cosmos.v1.3.6.fout" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/cosmos.v1.3.6.radio.v0.3.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/cosmos.v1.3.6.rest.v0.9.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/cosmos.v1.3.6.sfr.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/cosmos.v1.3.6.vdw.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/cosmos.v1.3.6.xray.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/cosmos.v1.3.6.zout" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/cosmos.v1.3.6.zspec.v0.4.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/cosmos2.v1.3.6.agn.v0.5.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/cosmos2.v1.3.8.cat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.153.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.153.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.155.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.155.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.161.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.161.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.274.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.274.rf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.274.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.readbin.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.temp_sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.tempfilt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.zbin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/._cosmos.v1.3.6.zout" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.153.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.153.rf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.153.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.155.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.155.rf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.155.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.161.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.161.rf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.161.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.274.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.274.rf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.274.rf.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.coeff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.param" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.readbin.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.temp_sed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.tempfilt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.zbin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos.v1.3.6.zout" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/eazy/cosmos2.v1.3.6.translate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/._readme_3dhst.v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/._readme_agn.v0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/._readme_radio.v0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/._readme_restframe.v0.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/._readme_sfr.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/._readme_vdw_v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/._readme_xray.v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/._readme_zspec.v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/readme_3dhst.v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/readme_agn.v0.5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/readme_radio.v0.3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/readme_restframe.v0.9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/readme_sfr.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/readme_vdw_v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/readme_xray.v0.4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zfourge/cosmos2/readme/readme_zspec.v0.4.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eazy_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Eazy_test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base.param" beforeDir="false" afterPath="$PROJECT_DIR$/base.param" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/catalogue_prepare.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue_prepare.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/global_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graphing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/graphing.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/eazy_auto.cat" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/eazy_auto.cat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/eazy_test.cat" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/eazy_test.cat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_auto_reload_graph.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/template_auto_reload_graph.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_run_auto.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_run_auto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/eazy_v1.3_AGN_auto.param" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eazy_v1.3_AGN_auto.param" afterDir="false" />
       <change beforePath="G:/honours/grizli/setup.py" beforeDir="false" afterPath="G:/honours/grizli/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -435,6 +140,9 @@
       <module name="SEDTemplate_conda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -548,7 +256,8 @@
       <workItem from="1723800190712" duration="109993000" />
       <workItem from="1724639486443" duration="73054000" />
       <workItem from="1725156249896" duration="41741000" />
-      <workItem from="1725322065998" duration="104219000" />
+      <workItem from="1725322065998" duration="157394000" />
+      <workItem from="1725863673316" duration="1015000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1710795058680</created>
@@ -863,12 +572,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>252</line>
+          <line>255</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>159</line>
+          <line>162</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -878,8 +587,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>366</line>
-          <option name="timeStamp" value="20" />
+          <line>551</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/global_settings.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/global_settings.py</url>
+          <line>70</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

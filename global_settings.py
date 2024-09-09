@@ -56,7 +56,10 @@ def nmad_calc(phot, spec, outlier=False):
         print(f'Phot: {len(phot)}, Spec: {len(spec)}')
         return
     phot = np.array(phot)
+    mask = (phot > 0)
+    phot = phot[mask]
     spec = np.array(spec)
+    spec = spec[mask]
     diff = (phot - spec) / (1 + spec)
     if outlier:
         diff_noout = diff[abs(diff) < catastrophic_limit]
@@ -382,9 +385,7 @@ def prob_adder(lnps):
 
     all_prob = np.zeros_like(lnps[0])
     for lnp in lnps:
-        all_prob += np.exp(lnp)
-
-    all_prob = normalize_by_sum(all_prob)
+        all_prob += lnp
 
     return all_prob
 
@@ -395,3 +396,157 @@ def return_prob(lnp):
     """
     import numpy as np
     return np.exp(lnp)
+
+
+def normalize_by_trapz(y_array, x_array):
+    """
+    Normalizes the array by the trapezoidal rule
+    """
+    import numpy as np
+
+    area_under_curve = np.trapz(y_array, x_array)
+    return y_array / area_under_curve
+
+def lnp_to_prob(lnp, zgrid):
+    """
+    Converts lnp to probability
+    """
+    import numpy as np
+
+    return normalize_by_trapz(np.exp(lnp), zgrid)
+
+def hierarchical_bayes_inner(f_bad, alpha, pzs):
+    """
+    Adds up each probability for each redshift bin, and returns the single probability
+    """
+    # adding each pz to a list
+    import numpy as np
+
+    pzs = np.array(pzs)
+    pzs = np.exp(pzs) # needs to be in proper prob to avoid imaginary numbers
+
+    single_prob = pzs[0]
+    for pz in pzs[1:]:
+        single_prob *= ((1/6)*f_bad + pz * (1-f_bad)) ** (1/alpha)
+
+    single_prob = np.log(single_prob)
+
+    return single_prob
+
+def hierarchical_bayes(alpha, lnps, f_max, f_min):
+    """
+    Hierarchical Bayesian model for combined pdfs
+    alpha: float, alpha value for the model
+    lnps: list of arrays, each array is the ln(probability) for a given template. Only use arrays of a single dimesion
+    f_max: float, maximum value for the model
+    f_min: float, minimum value for the model
+    """
+    import numpy as np
+
+    if f_max > 1 or f_min < 0:
+        raise ValueError("f_max and f_min must be between 0 and 1")
+
+    if f_max < f_min:
+        raise ValueError("f_max must be greater than f_min")
+
+    f_bad = np.linspace(f_min, f_max, 100) # resolution of 100
+    final_prob = []
+    for red_bin, val in enumerate(lnps[0]):
+        bin_probs = []
+        all_lnp_in_bin = []
+
+        for lnp in lnps:
+            all_lnp_in_bin.append(lnp[red_bin])
+
+        for f in f_bad:
+            bin_probs.append(hierarchical_bayes_inner(f, alpha, all_lnp_in_bin))
+        # with all the probs for all f in the bin, we can now integrate
+        prob_value = np.trapz(bin_probs, f_bad)
+        if prob_value == -np.inf:
+            prob_value = -404 # error value
+        final_prob.append(prob_value)
+
+    return final_prob
+
+
+def smooth_to_percent(lnp, z_spec, zgrid, sigma_goal):
+    """
+    Smooths the lnp values using a normal distribution to a percentage of the data
+    """
+    import numpy as np
+    import scipy.stats as stats
+
+    lnp = np.array(lnp)
+    z_spec = np.array(z_spec)
+
+    combined_array = np.concatenate((lnp, z_spec.reshape(-1, 1)), axis=1)
+    # removing all rows without a zspec value
+    filtered_array = combined_array[combined_array[:, -1] >= 0]
+    lnp = filtered_array[:, :-1]
+    zspec = filtered_array[:, -1]
+    percentage = (stats.norm.cdf(sigma_goal) - stats.norm.cdf(-sigma_goal))
+
+    zspec_in = 0
+    std = 0
+    count = 0
+    while zspec_in < percentage and count < 1000:
+        std += 0.005
+        count += 1
+        new_values, mean = peak_to_normal(lnp, zgrid, zgrid, std)
+        min_redshift = mean - sigma_goal * std
+        max_redshift = mean + sigma_goal * std
+        mask = (zspec >= min_redshift) & (zspec <= max_redshift)
+        zspec_in = np.sum([(zspec >= min_redshift) & (zspec <= max_redshift)]) / len(zspec)
+
+    return std
+
+
+def peak_to_normal(values, zgrid_match, zgrid_out, std):
+    """
+    Finds the peak value, sets it as the mean, and then makes a normal distribution with the given values directly
+    """
+    import numpy as np
+    values = np.array(values)
+    zgrid_match = np.array(zgrid_match)
+    zgrid_out = np.array(zgrid_out)
+
+    if values.ndim == 1:
+        if len(values) != len(zgrid_match):
+            raise ValueError(f"The number of zgrid values({len(zgrid_match)}) must be equal to the number of columns in values ({values.shape[0]})")
+
+        mean = zgrid_match[np.argmax(values)]
+    else:
+        if values.shape[1] != len(zgrid_match):
+            raise ValueError(f"The number of zgrid values({len(zgrid_match)}) must be equal to the number of columns in values ({values.shape[0]})")
+
+        mean = zgrid_match[np.argmax(values, axis=1)[:, np.newaxis]] # Shape: (30911, 1)]
+
+
+    z_indices = zgrid_out[np.newaxis, :] # Shape: (1, 39)
+
+    normal = 1/(np.sqrt(2 * np.pi * std ** 2)) * np.exp(-0.5 * ((z_indices - mean) / std) ** 2)
+    return normal, mean
+
+def new_redshift_maker(data_dict, object_id, old_index, zgrid):
+    """
+    Makes a new redshift from the lnps
+    """
+
+    all_lnps = []
+    for index in old_index:
+        data_index = data_dict.get(index)
+        all_lnps.append(data_index['lnp'][object_id])
+
+    # ADDED
+    added_prob = prob_adder(all_lnps)
+    new_redshift_add = parabola_fit(zgrid, added_prob)[0]
+
+    # HB
+    alpha = 3
+    f_max = 1
+    f_min = 0
+    hb_prob = hierarchical_bayes(alpha, all_lnps, f_max, f_min)
+    # hb_prob = lnp_to_prob(hb_prob, zgrid) # As the lnp is already prob, doesn't change anything, but removes -inf values
+    new_redshift_HB = parabola_fit(zgrid, hb_prob)[0]
+
+    return new_redshift_add, new_redshift_HB
