@@ -34,7 +34,7 @@ warnings.simplefilter('ignore', category=AstropyWarning)
 os.getcwd()
 
 # Load ZFOURGE catalogue from local drive
-test_title = 'individual_single_temp_fits'  # title of the test, eg. 1,2, A, B, Initial.
+# The naming convention suggests that 'individual' is at the start of the tests from this file
 template_key_dict = gs.get_template_dict() # loading is the same for any test, so it can be done here
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ agn_param = 'templates/eazy_v1.3_AGN_auto.param'  # parameter file with agn temp
 # ----------------------------------------------------------------------------------------------------------------------
 
 
-def eazy_single_template(template, field, id_key, template_key, use_galaxy_templates, use_prior, template_combos, z_step):
+def eazy_single_template(test_title, template, field, id_key, template_key, use_galaxy_templates, use_prior, template_combos, z_step):
     """
     Function to run EAZY for a single template, given by the number identifier
     """
@@ -158,6 +158,7 @@ def eazy_single_template(template, field, id_key, template_key, use_galaxy_templ
 
     # total NMAD
     self.crps_val = gs.crps(self.lnp, self.zgrid, self.ZSPEC)
+    mean_CRPS = np.mean(self.crps_val[self.crps_val >= 0])
     total_nmad, outlier_nmad, outlier_count, outlier_fraction = gs.nmad_calc(main_red['ZPHOT'], main_red['ZSPEC'], outlier=True)
     outlier_scatter = gs.rms_calc(main_red['ZPHOT'], main_red['ZSPEC'], outlier=True)
     bias = np.median(main_red['ZPHOT'] - main_red['ZSPEC'])
@@ -168,7 +169,7 @@ def eazy_single_template(template, field, id_key, template_key, use_galaxy_templ
     gs.save_key_data(output_location=output_location, field=field, test_title=test_title,
                      key_input=[id_key, z_step, template_key, templates_use, use_galaxy_templates,
                                 template_combos, total_count, mean_frac, spec_count, outlier_count, total_nmad,
-                                outlier_nmad, outlier_scatter, outlier_fraction, bias, np.nanmean(self.crps_val)])
+                                outlier_nmad, outlier_scatter, outlier_fraction, bias, mean_CRPS])
 
     with open(f'{output_directory}_individual_data.pkl', 'wb') as file:
         pickle.dump(self, file)
@@ -176,65 +177,108 @@ def eazy_single_template(template, field, id_key, template_key, use_galaxy_templ
 
 
 # Looping
-all_time = []
-all_fields = ['cdfs2', 'cosmos2', 'uds']
-all_id_keys = ['normal', 'lacy', 'donley', 'only_agn_0.4', 'xray_agn']
-all_template_keys = ['EAZY', 'atlas_rest', 'atlas_all', 'XMM']
-templates = {'atlas_rest': ['all'], 'atlas_all': ['all'], 'XMM': ['all']} # what templates for each key
+loop_style = 'recommendation'  # loop style, just saved loadouts for loops
+"""
+main loops through all fields, id_keys, and template sets
+single_loop loops through all templates in the agn template directory for a single field and id_key
+recommendation is to use to test a recommendation
+"""
+#
 
 if __name__ == '__main__':
+    if loop_style == 'main':
 
-    for field in all_fields:
-        for id_key in all_id_keys:
-            for template_key in all_template_keys:
+        test_title = 'ma_single_temp_fits_2'  # title of the test, eg. 1,2, A, B, Initial.
 
-                pool = mp.Pool(processes=4,
-                               maxtasksperchild=500)  # EAZY runs mutliprocessing, starting the pool here to avoid memory issues
-                all_time.append(time.ctime())
 
-                if template_key == 'EAZY': # Want to run only the eazy templates
-                    agn_sed = []
-                    template_set = 'atlas_rest' # doesn't matter here
-                    use_galaxy_templates = True
-                    z_step = 0.05
-                    t_combos = 'a'
-                    use_prior = 'y'
-                    eazy_single_template(agn_sed, field, id_key, template_set, use_galaxy_templates, use_prior, t_combos, z_step)
-                else:
-                    for template1 in templates[template_key]:
-                        template2 = template1 # if the loop crashes, change this to start at any template
-                        agn_sed = 'all'  # doesn't matter here
-                        use_galaxy_templates = False
+        all_time = []
+        all_fields = ['cdfs2', 'cosmos2', 'uds']
+        all_id_keys = ['normal', 'lacy_no_ovlp', 'xray_agn_no_ovlp']
+        all_template_keys = ['EAZY', 'atlas_all', 'XMM']
+        templates = {'atlas_rest': ['all'], 'atlas_all': ['all'], 'XMM': ['all']} # what templates for each key
+
+
+        for field in all_fields:
+            for id_key in all_id_keys:
+                for template_key in all_template_keys:
+
+                    pool = mp.Pool(processes=4,
+                                   maxtasksperchild=500)  # EAZY runs mutliprocessing, starting the pool here to avoid memory issues
+                    all_time.append(time.ctime())
+
+                    if template_key == 'EAZY': # Want to run only the eazy templates
+                        agn_sed = []
+                        template_set = 'atlas_rest' # doesn't matter here
+                        use_galaxy_templates = True
                         z_step = 0.05
-                        t_combos = 1
-                        use_prior = 'n'
-                        eazy_single_template(agn_sed, field, id_key, template_key, use_galaxy_templates, use_prior,
-                                             t_combos, z_step)
+                        t_combos = 'a'
+                        use_prior = 'y'
+                        eazy_single_template(agn_sed, field, id_key, template_set, use_galaxy_templates, use_prior, t_combos, z_step)
+                    else:
+                        for template1 in templates[template_key]:
+                            template2 = template1 # if the loop crashes, change this to start at any template
+                            use_galaxy_templates = False
+                            z_step = 0.05
+                            t_combos = 1
+                            use_prior = 'n'
+                            eazy_single_template(template2, field, id_key, template_key, use_galaxy_templates, use_prior,
+                                                 t_combos, z_step)
 
-                pool.close()
-                print(all_time)
-                print('--------------------------------------------------------------')
+                    pool.close()
+                    print(all_time)
+                    print('--------------------------------------------------------------')
 
-# # Looping
-# no_of_templates = len(agn_temp_all)
-# all_time = []
-#
-# if __name__ == '__main__':
-#
-#     for j in range(no_of_templates):
-#
-#         pool = mp.Pool(processes=4, maxtasksperchild=500)  # EAZY runs mutliprocessing, starting the pool here to avoid memory issues
-#
-#         i = j
-#
-#         if i >= no_of_templates:
-#             print('All templates done')
-#             break
-#
-#         all_time.append(time.ctime())
-#         eazy_single_template(i)
-#         pool.close()
-#
-#         print(f'template {i} done')
-#         print(all_time)
-#         print('--------------------------------------------------------------')
+    elif loop_style == 'single_loop':
+
+        template_set = 'atlas_rest'
+        use_galaxy_templates = True
+        use_prior = 'y'
+        t_combos = 'a'
+        z_step = 0.05
+        agn_dir = template_key_dict[template_set]  # dir with all agn templates
+        agn_temp_all = os.listdir(agn_dir)
+        field = 'uds'
+        id_key = 'xray_agn_no_ovlp'
+
+        test_title = f'individual_{field}_{id_key}_{z_step}'  # title of the test, eg. 1,2, A, B, Initial.
+
+        no_of_templates = len(agn_temp_all)
+        all_time = []
+
+        for j in range(no_of_templates):
+
+            pool = mp.Pool(processes=4, maxtasksperchild=500)  # EAZY runs multiprocessing, starting the pool here to avoid memory issues
+
+            i = j
+            if i >= no_of_templates:
+                print('All templates done')
+                break
+            all_time.append(time.ctime())
+            eazy_single_template(test_title, [i], field, id_key, template_set, use_galaxy_templates, use_prior, t_combos,
+                                 z_step)
+            pool.close()
+
+            print(f'template {i} done')
+            print(all_time)
+            print('--------------------------------------------------------------')
+
+    elif loop_style == 'recommendation':
+        # loops through all the recommended templates through the given field and id_key
+
+        template_set = 'atlas_rest'
+        agn_dir = template_key_dict[template_set]
+        use_galaxy_templates = False
+        use_prior = 'y'
+        t_combos = 'a'
+        z_step = 0.05
+        field = 'cdfs2'
+        id_key = 'lacy_no_ovlp'
+        recommendation_list = [27, 9, 12, 25, 34, 24, 2, 33, 39, 35, 19, 22, 4, 15, 1, 29, 3, 11, 6, 32, 17, 38, 20, 30, 5, 16, 21, 40, 37, 26, 31, 18, 28, 0, 13, 23, 8, 36, 7, 14, 10] # insert the recommended templates here
+
+        test_title = f'recommendation_added_{field}_{id_key}'  # title of the test, eg. 1,2, A, B, Initial, change the second chunk to the method used to get the recommendations.
+
+        for idi, template in enumerate(recommendation_list):
+
+            templates_to_run = recommendation_list[:idi+1]
+            print(templates_to_run)
+            eazy_single_template(test_title, templates_to_run, field, id_key, template_set, use_galaxy_templates, use_prior, t_combos, z_step)

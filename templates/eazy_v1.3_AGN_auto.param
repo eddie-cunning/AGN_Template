@@ -13,33 +13,7 @@
 #
 # Sample entry:
 # 1 [path_to_file]/template1.sed 1.0_lines 14.7 0.2 2,3,5 
-1   templates/MARA23032010/CB1_0_LOIII4.sed   1.0 0 1.0    
-2   templates/MARA23032010/I22491_40_TQSO1_60.sed   1.0 0 1.0    
-3   templates/MARA23032010/I22491_50_TQSO1_50.sed   1.0 0 1.0    
-4   templates/MARA23032010/I22491_60_TQSO1_40.sed   1.0 0 1.0    
-5   templates/MARA23032010/I22491_70_TQSO1_30.sed   1.0 0 1.0    
-6   templates/MARA23032010/I22491_80_TQSO1_20.sed   1.0 0 1.0    
-7   templates/MARA23032010/I22491_90_TQSO1_10.sed   1.0 0 1.0    
-8   templates/MARA23032010/I22491_template_norm.sed.save   1.0 0 1.0    
-9   templates/MARA23032010/M82_template_norm.sed   1.0 0 1.0    
-10   templates/MARA23032010/Mrk231_template_norm.sed   1.0 0 1.0    
-11   templates/MARA23032010/pl_I22491_10_TQSO1_90.sed   1.0 0 1.0    
-12   templates/MARA23032010/pl_I22491_20_TQSO1_80.sed   1.0 0 1.0    
-13   templates/MARA23032010/pl_I22491_30_TQSO1_70.sed   1.0 0 1.0    
-14   templates/MARA23032010/pl_QSOH_template_norm.sed   1.0 0 1.0    
-15   templates/MARA23032010/pl_QSO_DR2_029_t0.spec   1.0 0 1.0    
-16   templates/MARA23032010/pl_TQSO1_template_norm.sed   1.0 0 1.0    
-17   templates/MARA23032010/S0_10_QSO2_90.sed   1.0 0 1.0    
-18   templates/MARA23032010/S0_20_QSO2_80.sed   1.0 0 1.0    
-19   templates/MARA23032010/S0_30_QSO2_70.sed   1.0 0 1.0    
-20   templates/MARA23032010/S0_40_QSO2_60.sed   1.0 0 1.0    
-21   templates/MARA23032010/S0_50_QSO2_50.sed   1.0 0 1.0    
-22   templates/MARA23032010/S0_60_QSO2_40.sed   1.0 0 1.0    
-23   templates/MARA23032010/S0_70_QSO2_30.sed   1.0 0 1.0    
-24   templates/MARA23032010/S0_80_QSO2_20.sed   1.0 0 1.0    
-25   templates/MARA23032010/S0_90_QSO2_10.sed   1.0 0 1.0    
-26   templates/MARA23032010/S0_template_norm.sed   1.0 0 1.0    
-27   templates/MARA23032010/Sb_template_norm.sed   1.0 0 1.0    
-28   templates/MARA23032010/Sey18_template_norm.sed   1.0 0 1.0    
-29   templates/MARA23032010/Sey2_template_norm.sed   1.0 0 1.0    
-30   templates/MARA23032010/Spi4_template_norm.sed   1.0 0 1.0    
+1   templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc4151-central_multi_v1_spec-rest.dat   1.0 0 1.0    
+2   templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_h1821+643_multi_v1_spec-rest.dat   1.0 0 1.0    
+3   templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_mrk110_multi_v1_spec-rest.dat   1.0 0 1.0    
+4   templates/hlsp_agnsedatlas_rest/hlsp_agnsedatlas_multi_multi_ngc3516-central_multi_v1_spec-rest.dat   1.0 0 1.0    

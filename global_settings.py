@@ -21,9 +21,11 @@ def get_id_dict(field):
         'ir_agn': f'inputs/alternate_catalogues/{field}.ir_agn.cat',
         'radio_agn': f'inputs/alternate_catalogues/{field}.radio_agn.cat',
         'xray_agn': f'inputs/alternate_catalogues/{field}.xray_agn.cat',
+        'xray_agn_no_ovlp': f'inputs/alternate_catalogues/{field}.xray_agn.no_overlap.cat', # no lacy overlap
         'only_agn_0.4': f'inputs/alternate_catalogues/{field}.only_agn_above_0.4.cat',
         'only_agn_0.5': f'inputs/alternate_catalogues/{field}.only_agn_above_0.5.cat',
         'lacy': f'inputs/alternate_catalogues/{field}.lacy_wedge.cat',
+        'lacy_no_ovlp': f'inputs/alternate_catalogues/{field}.lacy.no_overlap.cat', # no x_ray overlap
         'donley': f'inputs/alternate_catalogues/{field}.donley_wedge.cat',
         'useflag': f'inputs/alternate_catalogues/{field}.useflag.cat'
     }
@@ -40,7 +42,8 @@ def get_template_dict():
         'atlas_composite': 'templates/hlsp_agnsedatlas_rest_composite/',
         'atlas_2014': 'templates/hlsp_agnsedatlas_2014/',
         'atlas_all': 'templates/hlsp_agnsedatlas_all/',
-        'XMM': 'templates/MARA23032010/'
+        'XMM': 'templates/MARA23032010/',
+        'test': 'templates/test/'
     }
     return template_key_dict
 
@@ -290,6 +293,10 @@ def normalizer(data):
     """
     Normalizes the data to a 0-1 scale
     """
+    if len(data) == 0:
+        return data
+    if max(data) == min(data):
+        return data
     return (data - min(data)) / (max(data) - min(data))
 
 
@@ -326,19 +333,19 @@ def crps(lnp, zgrid_prob, zspec_prob, zmin=0.005):
     crps_values = np.zeros(nobj)
     for i in range(nobj):
         if zspec_prob[i] <= zmin:
-            crps_values[i] = np.nan
+            crps_values[i] = -99
             continue
         cdf = normalizer(np.cumsum(unlog_prob[i]))
         crps_values[i] = np.trapz((cdf - heaviside(zgrid_prob, zspec_prob[i]))**2, zgrid_prob)
     return crps_values
 
 
-def flux_to_mag(flux):
+def flux_to_mag(flux, zeropoint):
     """
     Converts flux to magnitude
     """
     import numpy as np
-    return -2.5 * np.log10(flux) + 25
+    return -2.5 * np.log10(flux) + zeropoint
 
 
 def redshifter(bands, redshift):
@@ -383,8 +390,10 @@ def prob_adder(lnps):
     """
     import numpy as np
 
+
     all_prob = np.zeros_like(lnps[0])
     for lnp in lnps:
+        prob = np.exp(lnp) # adding probabilities, not ln(probabilities)
         all_prob += lnp
 
     return all_prob
@@ -421,12 +430,17 @@ def hierarchical_bayes_inner(f_bad, alpha, pzs):
     """
     # adding each pz to a list
     import numpy as np
+    import sys
 
     pzs = np.array(pzs)
-    pzs = np.exp(pzs) # needs to be in proper prob to avoid imaginary numbers
+    pzs = np.exp(pzs) # needs to be in proper prob, not log, to avoid imaginary numbers
 
-    single_prob = pzs[0]
-    for pz in pzs[1:]:
+    single_prob = 1
+    min_python_value = sys.float_info.min # smallest positive value in python
+    for pz in pzs:
+        if pz < min_python_value:
+            # if the lnp value is below ~-700, the exponent will be 0, ruining all the data present in this bin.
+            pz = min_python_value
         single_prob *= ((1/6)*f_bad + pz * (1-f_bad)) ** (1/alpha)
 
     single_prob = np.log(single_prob)
@@ -529,7 +543,7 @@ def peak_to_normal(values, zgrid_match, zgrid_out, std):
 
 def new_redshift_maker(data_dict, object_id, old_index, zgrid):
     """
-    Makes a new redshift from the lnps
+    Makes a new redshift from the llog liklihoods. Runs in a py script to hopefully increase perfomance
     """
 
     all_lnps = []

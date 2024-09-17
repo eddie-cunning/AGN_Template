@@ -2,7 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="added file to auto run templates, saving flux model information.">
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_3c120_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_3c273_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_3c351_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_3c390-3_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_ark120_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_ark564_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_f2m1113+1244_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_fairall9_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_h1821+643_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_iras-11119+3257_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_iras-f16156+0146_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_mrk110_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_mrk1502_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_mrk231_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_mrk279_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_mrk290_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_mrk421_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_mrk493_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_mrk509_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_mrk590_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_mrk817_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_mrk876_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_mrk926_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_ngc3227-central_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_ngc3516-central_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_ngc4051-central_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_ngc4151-central_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_ngc5548-central_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_ngc5728_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_ngc7469_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_oq-530_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_pg1211+143_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_pg1307+085_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_pg1415+451_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_pg2349-014_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_pks-1345+12_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_ton951_multi_v1_spec-rest.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/hlsp_agnsedatlas_rest2/hlsp_agnsedatlas_multi_multi_wcom_multi_v1_spec-rest.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue_prepare.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue_prepare.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/global_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graphing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/graphing.ipynb" afterDir="false" />
       <change beforePath="G:/honours/grizli/setup.py" beforeDir="false" afterPath="G:/honours/grizli/setup.py" afterDir="false" />
@@ -140,9 +179,6 @@
       <module name="SEDTemplate_conda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -257,7 +293,7 @@
       <workItem from="1724639486443" duration="73054000" />
       <workItem from="1725156249896" duration="41741000" />
       <workItem from="1725322065998" duration="157394000" />
-      <workItem from="1725863673316" duration="1015000" />
+      <workItem from="1725863673316" duration="73355000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1710795058680</created>
@@ -572,12 +608,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>255</line>
+          <line>258</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>162</line>
+          <line>165</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -587,17 +623,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>551</line>
+          <line>565</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>68</line>
+          <line>71</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>70</line>
+          <line>73</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
