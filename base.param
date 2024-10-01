@@ -13,7 +13,7 @@ TEMPLATE_COMBOS      not_defined_in_file                       # Template combin
                                                                #   1 : one template at a time
                                                                #   2 : two templates, read allowed combinations from TEMPLATES_FILE
                                                                #  -2 : two templates, all permutations
-                                                               #   a <or> 99 : all templates simultaneously
+                                                               #   a <or> 99 : all templates simultaneously, computed iterativly tolerated by NFM
 TEMPLATE_SMOOTH      0.0
 NMF_TOLERANCE        1e-05                                     # Tolerance for non-negative combinations (TEMPLATE_COMBOS=a)
 WAVELENGTH_FILE      templates/EAZY_v1.1_lines/lambda_v1.1.def # Wavelength grid definition file

@@ -173,6 +173,7 @@ def save_directory(output_location, field, test_title, id_key, template_key, agn
     """
     Function to produce a directory for saving the results
     """
+    # if the directory doesn't exist, create it
     if not os.path.exists(output_location):
         os.makedirs(output_location)
 
@@ -181,6 +182,16 @@ def save_directory(output_location, field, test_title, id_key, template_key, agn
 
     if not os.path.exists(f"{output_location}/{field}/{test_title}"):
         os.makedirs(f"{output_location}/{field}/{test_title}")
+
+    # if the length of the agn_sed exceeds 10, we need to make it shorter so windows can handle it
+    if len(agn_sed) > 10:
+        # as there should always be a preset order for running the tests,
+        # we can just show the first, last, and total number of templates
+        agn_sed = f'[{agn_sed[0]}_{agn_sed[-1]}_{len(agn_sed)}]'
+        # in any case where this many templates are added, and not all templates are used, loading this data will need
+        # to be done manually, as the order of the templates will not be known
+
+    # if there are arguments, add them to the directory
     if args:
         return f"{output_location}/{field}/{test_title}/{field}_{test_title}_{id_key}_{template_key}_{agn_sed}_{use_galaxy_templates}_{z_step}_{t_combos}" + '_'.join([str(i) for i in args])
     else:
@@ -337,6 +348,8 @@ def crps(lnp, zgrid_prob, zspec_prob, zmin=0.005):
             continue
         cdf = normalizer(np.cumsum(unlog_prob[i]))
         crps_values[i] = np.trapz((cdf - heaviside(zgrid_prob, zspec_prob[i]))**2, zgrid_prob)
+        if crps_values[i] > 6: # if the crps value is above 6, the crps value holds no information, as the maximum are under the curve is 6
+            crps_values[i] = -99
     return crps_values
 
 
@@ -564,3 +577,25 @@ def new_redshift_maker(data_dict, object_id, old_index, zgrid):
     new_redshift_HB = parabola_fit(zgrid, hb_prob)[0]
 
     return new_redshift_add, new_redshift_HB
+
+def angular_distance(ra1, dec1, ra2, dec2):
+    """
+    Calculate the angular distance between two points
+    """
+    import numpy as np
+
+    delta_ra = ra2 - ra1
+
+    ang_dist = np.arccos(np.sin(dec1) * np.sin(dec2) + np.cos(dec1) * np.cos(dec2) * np.cos(delta_ra))
+
+    return ang_dist
+
+def stringlist_to_list(stringlist):
+    """
+    Converts a string of a list to a list
+    """
+    if len(stringlist) == 2:
+        return []
+    else:
+        return [int(item) for item in stringlist[1:-1].split(',')]
+
