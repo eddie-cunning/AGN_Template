@@ -27,6 +27,8 @@ def get_id_dict(field):
         'lacy': f'inputs/alternate_catalogues/{field}.lacy_wedge.cat',
         'lacy_no_ovlp': f'inputs/alternate_catalogues/{field}.lacy.no_overlap.cat', # no x_ray overlap
         'donley': f'inputs/alternate_catalogues/{field}.donley_wedge.cat',
+        'donley_red': f'inputs/alternate_catalogues/{field}.donley_wedge_reduced.cat',
+        'donley_no_ovlp': f'inputs/alternate_catalogues/{field}.donley.no_overlap.cat', # no x_ray overlap
         'useflag': f'inputs/alternate_catalogues/{field}.useflag.cat'
     }
     return id_key_dict
@@ -43,7 +45,8 @@ def get_template_dict():
         'atlas_2014': 'templates/hlsp_agnsedatlas_2014/',
         'atlas_all': 'templates/hlsp_agnsedatlas_all/',
         'XMM': 'templates/MARA23032010/',
-        'test': 'templates/test/'
+        'test': 'templates/test/',
+        'EAZY_t': 'templates/EAZY_v1.1_lines/'
     }
     return template_key_dict
 
@@ -184,7 +187,10 @@ def save_directory(output_location, field, test_title, id_key, template_key, agn
         os.makedirs(f"{output_location}/{field}/{test_title}")
 
     # if the length of the agn_sed exceeds 10, we need to make it shorter so windows can handle it
-    if len(agn_sed) > 10:
+    if type(agn_sed) == str and not agn_sed == 'all':
+        agn_sed = stringlist_to_list(agn_sed)
+
+    if len(agn_sed) > 11:
         # as there should always be a preset order for running the tests,
         # we can just show the first, last, and total number of templates
         agn_sed = f'[{agn_sed[0]}_{agn_sed[-1]}_{len(agn_sed)}]'
@@ -304,11 +310,25 @@ def normalizer(data):
     """
     Normalizes the data to a 0-1 scale
     """
+    import numpy as np
     if len(data) == 0:
         return data
     if max(data) == min(data):
         return data
-    return (data - min(data)) / (max(data) - min(data))
+    data = np.array(data)
+
+    # remove nan
+    data_clean = data[~np.isnan(data)]
+
+    max_data = max(data_clean)
+    min_data = min(data_clean)
+    final_norm = np.where(
+        np.isnan(data),
+        np.nan,  # Keep NaN where data was NaN
+        (data - min_data) / (max_data - min_data)  # Normalize where data is not NaN
+    )
+
+    return final_norm
 
 
 def normalize_by_sum(data):
@@ -390,11 +410,12 @@ def parabola_fit(zgrid, lnp):
     c2 = (dy[1] / dx[1] - dy[0] / dx[0]) / (dx2[1] / dx[1] - dx2[0] / dx[0])
     c1 = (dy[0] - c2 * dx2[0]) / dx[0]
     c0 = y.T[0] - c1 * x.T[0] - c2 * x.T[0] ** 2
+    print(f"c0: {c0}, c1: {c1}, c2: {c2}")
 
     zbest = -c1 / 2 / c2
     lnpmax = c2 * zbest ** 2 + c1 * zbest + c0
 
-    return zbest, lnpmax
+    return zbest, lnpmax, {c0, c1, c2}
 
 
 def prob_adder(lnps):
@@ -569,7 +590,7 @@ def new_redshift_maker(data_dict, object_id, old_index, zgrid):
     new_redshift_add = parabola_fit(zgrid, added_prob)[0]
 
     # HB
-    alpha = 3
+    alpha = 3 # higher for more covariance, lower for less
     f_max = 1
     f_min = 0
     hb_prob = hierarchical_bayes(alpha, all_lnps, f_max, f_min)
@@ -590,12 +611,255 @@ def angular_distance(ra1, dec1, ra2, dec2):
 
     return ang_dist
 
-def stringlist_to_list(stringlist):
+def stringlist_to_list(stringlist, verbose=False):
     """
     Converts a string of a list to a list
     """
+    if verbose:
+        print(stringlist)
     if len(stringlist) == 2:
+        # if the string is just square brackets
         return []
+    elif ',' not in stringlist:
+        # if no commas, just remove the square brackets
+        return [int(stringlist[1:-1])]
     else:
         return [int(item) for item in stringlist[1:-1].split(',')]
 
+
+def run_eazy(self):
+    """
+    Runs the eazy code, essentially a wrapper around eazy, letting ['TEMPLATE_COMBOS'] do something
+    """
+    import numpy as np
+    import pandas as pd
+    import eazy
+    import os
+    params = self.param.params
+
+    if params['TEMPLATE_COMBOS'] == 'a':
+        # Iterative Zero-point corrections
+
+        NITER = 3  # no. of iterations
+        NBIN = np.minimum(self.NOBJ // 100, 180)  # no. of bins
+
+        for iter in range(NITER):
+            print('Iteration: ', iter)
+
+            sn = self.fnu / self.efnu
+            clip = (sn > 1).sum(axis=1) > 4  # Generally make this higher to ensure reasonable fits
+            self.iterate_zp_templates(idx=self.idx[clip], update_templates=False,
+                                      update_zeropoints=True, iter=iter, n_proc=8,
+                                      save_templates=False, error_residuals=False,
+                                      NBIN=NBIN, get_spatial_offset=False)
+
+            # Turn off error corrections derived above
+            self.set_sys_err(positive=True)
+
+            # Full catalog
+            sample = np.isfinite(self.ZSPEC)
+
+            # fit_parallel renamed to fit_catalog 14 May 2021
+            self.fit_catalog(self.idx[sample], n_proc=8)
+
+    elif params['TEMPLATE_COMBOS'] == '1':
+
+        ampl, chi2, lnp = self.fit_single_templates(self)
+
+        # find the best fit, loop through each row and get the average chi2
+        chi2_df = pd.DataFrame()
+
+        for template_ in range(chi2.shape[0]):  # saves n different arrays fo n different templates
+            # first getting the proper chi2, as I believe this has saved it per filter, which is not chi2
+            data = chi2[template_, :, :]
+            chi2_best = np.min(data, axis=1)  # lowest chi2 value for each object
+            chi2_df[f'{template_}'] = pd.Series(chi2_best)
+
+        best_template = chi2_df.idxmin(axis=1)
+
+
+        # from the best template, get the correct ampl, chi2 and lnp
+        ampl_final = []
+        template_use = np.array(best_template)
+        chi2_final = []
+        lnp_final = []
+
+        for id_, template_ in enumerate(best_template):
+            # get log likelihood
+            lnp_final.append(lnp[int(template_), id_, :])
+
+            max_lnp = np.argmax(lnp[int(template_), id_, :])
+
+            ampl_final.append(ampl[int(template_), id_, max_lnp])
+            chi2_final.append(chi2[int(template_), id_, max_lnp])
+
+        ampl_final = np.array(ampl_final)
+        chi2_final = np.array(chi2_final)
+        lnp_final = np.array(lnp_final)
+
+        self.amp_final = ampl_final
+        self.chi2_fit = chi2_final
+        self.lnp = lnp_final
+
+        # iterate through the rows for each object, and get the best redshift
+        redshift_para = []
+        for obj_lnp in lnp_final:
+            j = parabola_fit(self.zgrid, obj_lnp)
+            redshift_para.append(j[0])
+
+        self.zbest = np.array(redshift_para)
+        self.zml = np.array(redshift_para)  # for consistency
+
+def pz_percentiles(self, percentiles=[2.5, 16, 50, 84, 97.5], oversample=5,
+                   selection=None):
+    """
+    Compute percentiles of the final PDF(z)
+
+    Parameters
+    ----------
+    percentiles : list
+        Percentiles to compute from the p(z) distribution
+
+    oversample : int
+        Oversampling factor of the redshift grid for smoother
+        interpolation
+
+    selection : array-like
+        Subsample selection array (bool or indices)
+
+    Returns
+    -------
+    zlimits : (NOBJ, M) array
+        Where `M` is the number of `percentiles` requested.
+
+    """
+    import scipy.interpolate
+    import numpy as np
+    import eazy
+    try:
+        from scipy.integrate import cumtrapz
+    except ImportError:
+        from scipy.integrate import cumulative_trapezoid as cumtrapz
+
+    interpolator = scipy.interpolate.Akima1DInterpolator
+
+    p100 = np.array(percentiles) / 100.
+    zlimits = np.zeros((self.NOBJ, p100.size), dtype=self.ARRAY_DTYPE)
+
+    zr = [self.param['Z_MIN'], self.param['Z_MAX']]
+    zgrid_zoom = log_zgrid(zr=zr, dz=self.param['Z_STEP'] / oversample)
+
+    ok = self.zbest > self.zgrid[0]
+    if selection is not None:
+        ok &= selection
+
+    if ok.sum() == 0:
+        print('pz_percentiles: No objects in selection')
+        return zlimits
+
+    spl = interpolator(self.zgrid, self.lnp[ok, :], axis=1)
+    pzcum = cumtrapz(np.exp(spl(zgrid_zoom)), x=zgrid_zoom, axis=1)
+
+    # Akima1DInterpolator can get some NaNs at the end?
+    valid = np.isfinite(pzcum)
+    pzcum[~valid] = 0.
+    pzcmax = pzcum.max(axis=1)
+    pzcum = (pzcum.T / pzcmax).T
+    pzcum[~valid] = 1.
+
+    # pzcum /= pzcum[-1]
+    # pzcum = cumtrapz(self.pz[ok,:], x=self.zgrid, axis=1)
+
+    for j, i in enumerate(self.idx[ok]):
+        zlimits[i, :] = np.interp(p100, pzcum[j, :], zgrid_zoom[1:])
+
+    del (pzcum)
+    del (p100)
+    del (spl)
+    del (zgrid_zoom)
+    del (valid)
+    del (pzcmax)
+
+    return zlimits
+
+
+def log_zgrid(zr=[0.7, 3.4], dz=0.01):
+    """Make a logarithmically spaced redshift grid
+
+    Parameters
+    ----------
+    zr : [float, float]
+        Minimum and maximum of the desired grid
+
+    dz : float
+        Step size, dz/(1+z)
+
+    Returns
+    -------
+    zgrid : array-like
+        Redshift grid
+
+    """
+    import numpy as np
+    zgrid = np.exp(np.arange(np.log(1 + zr[0]), np.log(1 + zr[1]), dz)) - 1
+    return zgrid
+
+
+def get_list_vals(column, index):
+    """
+    Extract specific indices from lists stored in a pandas Series/column.
+
+    Parameters:
+    -----------
+    column : pandas.Series
+        A column where each cell contains a list
+    index : int or list of int
+        The index or indices to extract from each list
+
+    Returns:
+    --------
+    pandas.Series
+        A series with the extracted values, maintaining the same index as the input
+
+    Examples:
+    --------
+    --- df['column'] = [[1,2,3,4], [5,6,7,8]]
+    --- get_list_vals(df['column'], [0,1,3])
+    # Returns series with [[1,2,4], [5,6,8]]
+    """
+    if isinstance(index, int):
+        return column.apply(lambda x: x[index] if len(x) > index else None)
+    else:
+        return column.apply(lambda x: [x[i] for i in index if i < len(x)])
+
+def y_value(residual_df, x):
+    import numpy as np
+    return np.log10(np.array(residual_df[f'w_{x}']))
+
+def z_value(residual_df, x):
+    import numpy as np
+    return np.array(residual_df[f'r_{x}'])
+
+def z_value_copy(residual_df, x):
+    import numpy as np
+    return np.array(residual_df[f'rc_{x}'])
+
+def c_value(residual_df, x):
+    import numpy as np
+    return np.array(residual_df[f'c_{x}'])
+
+def u_value(residual_df, x):
+    import numpy as np
+    return np.array(residual_df[f'u_{x}'])
+
+def s_value(residual_df, x):
+    import numpy as np
+    return np.array(residual_df[f's_{x}'])
+
+def t_value(residual_df, x):
+    import numpy as np
+    return np.array(residual_df[f't_{x}'])
+
+def diff_value(residual_df, x):
+    import numpy as np
+    return np.array(((residual_df[f'r_{x}']) - residual_df[f'r_-1']) / (1 + residual_df[f'r_-1']))

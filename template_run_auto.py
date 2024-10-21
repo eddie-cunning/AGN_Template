@@ -143,6 +143,13 @@ def eazy_single_template(test_title, template, field, id_key, template_key, use_
     # fit_parallel renamed to fit_catalog 14 May 2021
     self.fit_catalog(self.idx[sample], n_proc=8)
 
+    warnings.simplefilter('ignore', category=RuntimeWarning)
+    zout, hdu = self.standard_output(simple=False,
+                                     rf_pad_width=0.5, rf_max_err=2,
+                                     prior=True, beta_prior=True,
+                                     absmag_filters=[],
+                                     extra_rf_filters=[])
+
     # Show zspec-zphot comparison
     zmax = 6
     # ------------------------------------------------------------------------------------------------------------------
@@ -177,11 +184,11 @@ def eazy_single_template(test_title, template, field, id_key, template_key, use_
 
 
 # Looping
-loop_style = 'nothing'  # loop style, just saved loadouts for loops
+loop_style = 'single_loop'  # loop style, just saved loadouts for loops
 """
 main loops through all fields, id_keys, and template sets that are set
 single_loop loops through all templates in the agn template directory for a single field and id_key
-recommendation is to use to test a recommendation
+recommendation is to test a recommendation
 """
 #
 
@@ -190,7 +197,7 @@ if __name__ == '__main__':
 
         print('Running main loop')
 
-        test_title = 'main_template_sets_3'  # title of the test, eg. 1,2, A, B, Initial.
+        test_title = 'main_template_sets_6'  # title of the test, eg. 1,2, A, B, Initial.
 
 
         all_time = []
@@ -212,18 +219,20 @@ if __name__ == '__main__':
                                    maxtasksperchild=500)  # EAZY runs mutliprocessing, starting the pool here to avoid memory issues
                     all_time.append(time.ctime())
 
+
                     if template_key == 'EAZY': # Want to run only the eazy templates
                         agn_sed = []
                         template_set = 'atlas_rest' # doesn't matter here
                         use_galaxy_templates = True
-                        z_step = 0.05
+                        z_step = 0.01
                         t_combos = 'a'
                         use_prior = 'y'
                         eazy_single_template(test_title, agn_sed, field, id_key, template_set, use_galaxy_templates, use_prior, t_combos, z_step)
 
                     elif template_key == 'recommendation': # Want to run the recommendation templates
 
-                        if field == 'uds' and id_key == 'x_ray_agn_no_ovlp': # no recommendations for this field and id_key
+                        if field == 'uds' and id_key == 'xray_agn_no_ovlp':  # no recommendations for this field and id_key
+                            print(f'No recommendations for {field} and {id_key}')
                             continue
 
                         template_list = recommendation_df[(recommendation_df['field'] == field)
@@ -232,7 +241,7 @@ if __name__ == '__main__':
                         print(f'Using the templates {agn_sed}')
                         template_set = 'atlas_rest'
                         use_galaxy_templates = True
-                        z_step = 0.05
+                        z_step = 0.01
                         t_combos = 'a'
                         use_prior = 'y'
                         eazy_single_template(test_title, agn_sed, field, id_key, template_set, use_galaxy_templates, use_prior,
@@ -242,9 +251,13 @@ if __name__ == '__main__':
                         for template1 in templates[template_key]: # used for single template fits
                             template2 = template1 # if the loop crashes, change this to start at any template
                             use_galaxy_templates = False
-                            z_step = 0.05
+                            z_step = 0.01
                             t_combos = 1
-                            use_prior = 'n'
+                            if template_key == 'atlas_all':
+                                use_prior = 'n'
+                            elif template_key == 'XMM':
+                                use_prior = 'y'
+
                             eazy_single_template(test_title, template2, field, id_key, template_key, use_galaxy_templates, use_prior,
                                                  t_combos, z_step)
 
@@ -259,10 +272,10 @@ if __name__ == '__main__':
         use_galaxy_templates = True
         use_prior = 'y'
         t_combos = 'a'
-        z_step = 0.05
+        z_step = 0.005
         agn_dir = template_key_dict[template_set]  # dir with all agn templates
         agn_temp_all = os.listdir(agn_dir)
-        field = 'uds'
+        field = 'cosmos2'
         id_key = 'donley'
 
         test_title = f'individual_{field}_{id_key}_{z_step}_{use_galaxy_templates}'  # title of the test, eg. 1,2, A, B, Initial.
@@ -272,7 +285,7 @@ if __name__ == '__main__':
 
         for j in range(no_of_templates):
 
-            pool = mp.Pool(processes=4, maxtasksperchild=500)  # EAZY runs multiprocessing, starting the pool here to avoid memory issues
+            pool = mp.Pool(processes=4, maxtasksperchild=100)  # EAZY runs multiprocessing, starting the pool here to avoid memory issues
 
             i = j
             if i >= no_of_templates:
@@ -299,7 +312,7 @@ if __name__ == '__main__':
         z_step = 0.05
         field = 'cosmos2'
         id_key = 'normal'
-        recommendation_list = [27, 9, 29, 22, 37, 31, 30, 25, 35, 24] # insert the recommended templates here
+        recommendation_list = [27, 9, 29, 22] # insert the recommended templates here
 
         test_title = f'recommendation_added_{field}_{id_key}'  # title of the test, eg. 1,2, A, B, Initial, change the second chunk to the method used to get the recommendations.
 

@@ -2,14 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b94065ea-099f-49fa-97ec-136c5da3f7e5" name="Changes" comment="added file to auto run templates, saving flux model information.">
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cdfs2.donley_wedge_reduced.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/combined2.all_agn.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/combined2.donley_wedge.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/combined2.ir_agn.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/combined2.lacy.no_overlap.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/combined2.lacy_wedge.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/combined2.no_agn.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/combined2.normal.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/combined2.radio_agn.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/combined2.useflag.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/combined2.xray_agn.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/combined2.xray_agn.no_overlap.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/cosmos2.donley_wedge_reduced.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/alternate_catalogues/uds.donley_wedge_reduced.cat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inputs/combined2_agn_frac.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zfourge/combined2/eazy/combined.1.0.translate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Eazy_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Eazy_test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base.param" beforeDir="false" afterPath="$PROJECT_DIR$/base.param" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue_prepare.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue_prepare.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/global_settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/global_settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graphing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/graphing.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inputs/eazy_auto.cat" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/eazy_auto.cat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inputs/eazy_reload.cat" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/eazy_reload.cat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputs/eazy_test.cat" beforeDir="false" afterPath="$PROJECT_DIR$/inputs/eazy_test.cat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template_run_auto.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_run_auto.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eazy_v1.3_AGN.param" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/eazy_v1.3_AGN_auto.param" beforeDir="false" afterPath="$PROJECT_DIR$/templates/eazy_v1.3_AGN_auto.param" afterDir="false" />
@@ -81,7 +97,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/eddie/PycharmProjects/SEDTemplate_conda&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
 }</component>
   <component name="PyConsoleOptionsProvider">
@@ -148,6 +164,9 @@
       <module name="SEDTemplate_conda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -264,7 +283,27 @@
       <workItem from="1725322065998" duration="157394000" />
       <workItem from="1725863673316" duration="87690000" />
       <workItem from="1726974173149" duration="1244000" />
-      <workItem from="1727124006597" duration="84363000" />
+      <workItem from="1727124006597" duration="85272000" />
+      <workItem from="1728118914450" duration="9795000" />
+      <workItem from="1728501566314" duration="34020000" />
+      <workItem from="1728945260491" duration="23159000" />
+      <workItem from="1728987462172" duration="24190000" />
+      <workItem from="1729040189588" duration="58532000" />
+      <workItem from="1729392310641" duration="31171000" />
+      <workItem from="1729673021830" duration="33929000" />
+      <workItem from="1729931001406" duration="1461000" />
+      <workItem from="1729932870477" duration="25073000" />
+      <workItem from="1730107582835" duration="17752000" />
+      <workItem from="1730229632546" duration="2619000" />
+      <workItem from="1730243014080" duration="595000" />
+      <workItem from="1730283894714" duration="27882000" />
+      <workItem from="1730453103410" duration="102688000" />
+      <workItem from="1731380707555" duration="20029000" />
+      <workItem from="1731599048625" duration="14956000" />
+      <workItem from="1731791403722" duration="298000" />
+      <workItem from="1732073997947" duration="638000" />
+      <workItem from="1751246013949" duration="235000" />
+      <workItem from="1759119512863" duration="1985000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1710795058680</created>
@@ -589,13 +628,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>269</line>
+          <line>275</line>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>165</line>
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$USER_HOME$/anaconda3/envs/SEDTemplate_conda/Lib/site-packages/eazy/photoz.py</url>
@@ -604,28 +638,38 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>578</line>
+          <line>599</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>71</line>
+          <line>74</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>73</line>
+          <line>76</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/template_run_auto.py</url>
-          <line>223</line>
+          <line>231</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/global_settings.py</url>
-          <line>63</line>
+          <line>66</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/template_run_auto.py</url>
+          <line>222</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/global_settings.py</url>
+          <line>624</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -640,6 +684,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SEDTemplate_conda$agn_catalogue.coverage" NAME="agn_catalogue Coverage Results" MODIFIED="1712796515870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SEDTemplate_conda$template_converter.coverage" NAME="template_converter Coverage Results" MODIFIED="1725341897257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/SEDTemplate_conda$template_run_auto.coverage" NAME="template_run_auto Coverage Results" MODIFIED="1727732514085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SEDTemplate_conda$template_run_auto.coverage" NAME="template_run_auto Coverage Results" MODIFIED="1729324556271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
